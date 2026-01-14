@@ -1,0 +1,764 @@
+<?xml version="1.0"?>
+<level id="102" name="edge time" time="115,140,189,221" music="dark" theme="gray" zoom="2" size="90x63x9" spawn="87,56,5" exit="39,2,1">
+	<prism pos="87,56,1"/>
+
+	<!-- balcony sequence -->
+	<cameratrigger pos="84,46,1" radius="2,2" zoom="3" time="1!"/>
+	<cameralock id="balcSeq" eye="75,43,6"/>
+	<button pos="77,44,1" radius="1,2" lock="balcSeq"/>
+	<button pos="75,43,6" lock="none">
+		<move id="BS1" waypoint="0"/>
+		<move id="BS2" waypoint="0"/>
+		<move id="BS3" waypoint="0"/>
+		<move id="BS4" waypoint="0"/>
+		<move id="BS5" waypoint="0"/>
+		<move id="BS6" waypoint="0"/>
+		<move id="BS7" waypoint="0"/>
+		<move id="BS8" waypoint="0"/>
+		<move id="BS9" waypoint="0"/>
+	</button>
+	<darkcube pos="77,44,1" radius="1,2" spawn="76,40,6">
+		<event type="southdown" time="172"/>
+		<event type="southup" time="244"/>
+		<event type="eastdown" time="104"/>
+		<event type="eastup" time="76"/>
+		<event type="eastdown" time="132"/>
+		<event type="eastup" time="64"/>
+		<event type="northdown" time="24"/>
+		<event type="northup" time="388"/>
+		<event type="westdown" time="40"/>
+		<event type="westup" time="192"/>
+	</darkcube>
+	<moving id="BS1" pos="75,43,1" half="false" theme="gray" active="false">
+		<waypoint to="75,39,1" travel="1!" act="halt"/>
+	</moving>
+	<moving id="BS2" pos="75,44,1" half="false" theme="gray" active="false">
+		<waypoint to="75,40,1" travel="1!" act="halt"/>
+	</moving>
+	<moving id="BS3" pos="75,45,1" half="false" theme="gray" active="false">
+		<waypoint to="75,41,1" travel="1!" act="halt"/>
+	</moving>
+	<moving id="BS4" pos="75,43,2" half="false" theme="gray" active="false">
+		<waypoint to="75,39,2" travel="1!" act="halt"/>
+	</moving>
+	<moving id="BS5" pos="75,44,2" half="false" theme="gray" active="false">
+		<waypoint to="75,40,2" travel="1!" act="halt"/>
+	</moving>
+	<moving id="BS6" pos="75,45,2" half="false" theme="gray" active="false">
+		<waypoint to="75,41,2" travel="1!" act="halt"/>
+	</moving>
+	<moving id="BS7" pos="75,43,3" half="false" theme="gray" active="false">
+		<waypoint to="75,39,3" travel="1!" act="halt"/>
+	</moving>
+	<moving id="BS8" pos="75,44,3" half="false" theme="gray" active="false">
+		<waypoint to="75,40,3" travel="1!" act="halt"/>
+	</moving>
+	<moving id="BS9" pos="75,45,3" half="false" theme="gray" active="false">
+		<waypoint to="75,41,3" travel="1!" act="halt"/>
+	</moving>
+
+	<!-- 1st encounter -->
+	<darkcube pos="71,44,1" radius="0,1" spawn="68,38,1">
+		<event type="eastdown" time="132"/>
+		<event type="eastup" time="468"/>
+		<event type="northdown" time="132"/>
+		<event type="northup" time="132"/>
+		<event type="eastdown" time="28"/>
+		<event type="eastup" time="88"/>
+		<event type="northdown" time="44"/>
+		<event type="northup" time="416"/>
+		<event type="northdown" time="140"/>
+		<event type="northup" time="284"/>
+		<event type="eastdown" time="28"/>
+		<event type="eastup" time="80"/>
+		<event type="eastdown" time="136"/>
+		<event type="eastup" time="320"/>
+		<event type="eastdown" time="212"/>
+		<event type="eastup" time="456"/>
+		<event type="northdown" time="24"/>
+		<event type="northup" time="80"/>
+		<event type="eastdown" time="20"/>
+		<event type="eastup" time="252"/>
+		<event type="northdown" time="28"/>
+		<event type="northup" time="176"/>
+		<event type="eastdown" time="40"/>
+		<event type="eastup" time="348"/>
+	</darkcube>
+	<bumper id="BD1" pos="63,39,1" dir="north" theme="gray" active="false" bump="10" pause="10"/>
+	<bumper id="BD2" pos="62,29,1" dir="north" theme="gray" active="false" bump="10" pause="10"/>
+	<bumper id="BD3" pos="62,21,1" dir="east" theme="gray" active="false" bump="10" pause="10"/>
+	<bumper id="BD4" pos="55,21,1" dir="east" theme="gray" active="false" bump="10" pause="10"/>
+	<button pos="63,38,1" pressed="false" stayup="true" radius="0,0"><bump id="BD1" act="once"/></button>
+	<button pos="62,28,1" pressed="false" stayup="true" radius="0,0"><bump id="BD2" act="once"/></button>
+	<button pos="61,21,1" pressed="false" stayup="true" radius="0,0"><bump id="BD3" act="once"/></button>
+	<button pos="54,21,1" pressed="false" stayup="true" radius="0,0"><bump id="BD4" act="once"/></button>
+
+	<prism pos="68,44,1"/>
+	<checkpoint pos="68,44,1" radius="0,1" respawn="68,44,1"/>
+	<cameratrigger pos="68,44,1" radius="0,1" time="1!" fov="33"/>
+
+	<moving id="M11" pos="57,43,0" half="true" theme="gray" active="false">
+		<waypoint to="57,43,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M12" pos="58,43,0" half="true" theme="gray" active="false">
+		<waypoint to="58,43,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M13" pos="59,43,0" half="true" theme="gray" active="false">
+		<waypoint to="59,43,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M14" pos="60,43,0" half="true" theme="gray" active="false">
+		<waypoint to="60,43,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M15" pos="61,43,0" half="true" theme="gray" active="false">
+		<waypoint to="61,43,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M16" pos="57,44,0" half="true" theme="gray" active="false">
+		<waypoint to="57,44,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M17" pos="58,44,0" half="true" theme="gray" active="false">
+		<waypoint to="58,44,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M18" pos="59,44,0" half="true" theme="gray" active="false">
+		<waypoint to="59,44,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M19" pos="60,44,0" half="true" theme="gray" active="false">
+		<waypoint to="60,44,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M10" pos="61,44,0" half="true" theme="gray" active="false">
+		<waypoint to="61,44,-64" travel="3!" act="halt"/>
+	</moving>
+	<button pos="63,38,1">
+		<move id="M11" waypoint="0"/>
+		<move id="M12" waypoint="0"/>
+		<move id="M13" waypoint="0"/>
+		<move id="M14" waypoint="0"/>
+		<move id="M15" waypoint="0"/>
+		<move id="M16" waypoint="0"/>
+		<move id="M17" waypoint="0"/>
+		<move id="M18" waypoint="0"/>
+		<move id="M19" waypoint="0"/>
+		<move id="M10" waypoint="0"/>
+	</button>
+
+	<moving id="M21" pos="55,38,0" half="true" theme="gray" active="false">
+		<waypoint to="55,38,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M22" pos="55,39,0" half="true" theme="gray" active="false">
+		<waypoint to="55,39,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M23" pos="55,40,0" half="true" theme="gray" active="false">
+		<waypoint to="55,40,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M24" pos="55,41,0" half="true" theme="gray" active="false">
+		<waypoint to="55,41,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M25" pos="56,38,0" half="true" theme="gray" active="false">
+		<waypoint to="56,38,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M26" pos="56,39,0" half="true" theme="gray" active="false">
+		<waypoint to="56,39,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M27" pos="56,40,0" half="true" theme="gray" active="false">
+		<waypoint to="56,40,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M28" pos="56,41,0" half="true" theme="gray" active="false">
+		<waypoint to="56,41,-64" travel="3!" act="halt"/>
+	</moving>
+	<button pos="62,32,1">
+		<move id="M21" waypoint="0"/>
+		<move id="M22" waypoint="0"/>
+		<move id="M23" waypoint="0"/>
+		<move id="M24" waypoint="0"/>
+		<move id="M25" waypoint="0"/>
+		<move id="M26" waypoint="0"/>
+		<move id="M27" waypoint="0"/>
+		<move id="M28" waypoint="0"/>
+	</button>
+
+	<moving id="M31" pos="56,35,0" half="true" theme="gray" active="false">
+		<waypoint to="56,35,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M32" pos="57,35,0" half="true" theme="gray" active="false">
+		<waypoint to="57,35,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M33" pos="56,36,0" half="true" theme="gray" active="false">
+		<waypoint to="56,36,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M34" pos="57,36,0" half="true" theme="gray" active="false">
+		<waypoint to="57,36,-64" travel="3!" act="halt"/>
+	</moving>
+	<button pos="62,29,2">
+		<move id="M31" waypoint="0"/>
+		<move id="M32" waypoint="0"/>
+		<move id="M33" waypoint="0"/>
+		<move id="M34" waypoint="0"/>
+	</button>
+
+	<moving id="M41" pos="55,30,0" half="true" theme="gray" active="false">
+		<waypoint to="55,30,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M42" pos="55,31,0" half="true" theme="gray" active="false">
+		<waypoint to="55,31,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M43" pos="55,32,0" half="true" theme="gray" active="false">
+		<waypoint to="55,32,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M44" pos="55,33,0" half="true" theme="gray" active="false">
+		<waypoint to="55,33,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M45" pos="57,30,0" half="true" theme="gray" active="false">
+		<waypoint to="57,30,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M46" pos="57,31,0" half="true" theme="gray" active="false">
+		<waypoint to="57,31,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M47" pos="57,32,0" half="true" theme="gray" active="false">
+		<waypoint to="57,32,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M48" pos="57,33,0" half="true" theme="gray" active="false">
+		<waypoint to="57,33,-64" travel="3!" act="halt"/>
+	</moving>
+	<button pos="62,23,1">
+		<move id="M41" waypoint="0"/>
+		<move id="M42" waypoint="0"/>
+		<move id="M43" waypoint="0"/>
+		<move id="M44" waypoint="0"/>
+		<move id="M45" waypoint="0"/>
+		<move id="M46" waypoint="0"/>
+		<move id="M47" waypoint="0"/>
+		<move id="M48" waypoint="0"/>
+	</button>
+
+	<moving id="M51" pos="56,27,-1" half="true" theme="gray" active="false">
+		<waypoint to="53,27,-1" travel="60" pause="20" act="next"/>
+		<waypoint to="52,26,0" travel="60" act="halt"/>
+	</moving>
+	<moving id="M52" pos="56,27,-1" half="true" theme="gray" active="false">
+		<waypoint to="53,27,-1" travel="60" pause="20" act="next"/>
+		<waypoint to="53,26,0" travel="60" act="halt"/>
+	</moving>
+	<moving id="M53" pos="56,27,-1" half="true" theme="gray" active="false">
+		<waypoint to="53,27,-1" travel="60" pause="20" act="next"/>
+		<waypoint to="54,26,0" travel="60" act="halt"/>
+	</moving>
+	<moving id="M54" pos="56,27,-1" half="true" theme="gray" active="false">
+		<waypoint to="53,27,-1" travel="60" pause="20" act="next"/>
+		<waypoint to="52,27,0" travel="60" act="halt"/>
+	</moving>
+	<moving id="M55" pos="56,27,-1" half="true" theme="gray" active="false">
+		<waypoint to="53,27,-1" travel="60" pause="20" act="next"/>
+		<waypoint to="53,27,0" travel="60" act="halt"/>
+	</moving>
+	<moving id="M56" pos="56,27,-1" half="true" theme="gray" active="false">
+		<waypoint to="53,27,-1" travel="60" pause="20" act="next"/>
+		<waypoint to="54,27,0" travel="60" act="halt"/>
+	</moving>
+	<moving id="M57" pos="56,27,-1" half="true" theme="gray" active="false">
+		<waypoint to="53,27,-1" travel="60" pause="20" act="next"/>
+		<waypoint to="52,28,0" travel="60" act="halt"/>
+	</moving>
+	<moving id="M58" pos="56,27,-1" half="true" theme="gray" active="false">
+		<waypoint to="53,27,-1" travel="60" pause="20" act="next"/>
+		<waypoint to="53,28,0" travel="60" act="halt"/>
+	</moving>
+	<moving id="M59" pos="56,27,-1" half="true" theme="gray" active="false">
+		<waypoint to="53,27,-1" travel="60" pause="20" act="next"/>
+		<waypoint to="54,28,0" travel="60" act="halt"/>
+	</moving>
+	<button pos="61,21,1">
+		<move id="M51" waypoint="0"/>
+		<move id="M52" waypoint="0"/>
+		<move id="M53" waypoint="0"/>
+		<move id="M54" waypoint="0"/>
+		<move id="M55" waypoint="0"/>
+		<move id="M56" waypoint="0"/>
+		<move id="M57" waypoint="0"/>
+		<move id="M58" waypoint="0"/>
+		<move id="M59" waypoint="0"/>
+	</button>
+
+	<moving id="M61" pos="39,26,0" half="true" theme="gray" active="false">
+		<waypoint to="39,26,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M62" pos="40,26,0" half="true" theme="gray" active="false">
+		<waypoint to="40,26,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M63" pos="41,26,0" half="true" theme="gray" active="false">
+		<waypoint to="41,26,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M64" pos="42,26,0" half="true" theme="gray" active="false">
+		<waypoint to="42,26,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M65" pos="43,26,0" half="true" theme="gray" active="false">
+		<waypoint to="43,26,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M66" pos="39,27,0" half="true" theme="gray" active="false">
+		<waypoint to="39,27,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M67" pos="40,27,0" half="true" theme="gray" active="false">
+		<waypoint to="40,27,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M68" pos="41,27,0" half="true" theme="gray" active="false">
+		<waypoint to="41,27,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M69" pos="42,27,0" half="true" theme="gray" active="false">
+		<waypoint to="42,27,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M60" pos="43,27,0" half="true" theme="gray" active="false">
+		<waypoint to="43,27,-64" travel="3!" act="halt"/>
+	</moving>
+	<button pos="51,21,1">
+		<move id="M61" waypoint="0"/>
+		<move id="M62" waypoint="0"/>
+		<move id="M63" waypoint="0"/>
+		<move id="M64" waypoint="0"/>
+		<move id="M65" waypoint="0"/>
+		<move id="M66" waypoint="0"/>
+		<move id="M67" waypoint="0"/>
+		<move id="M68" waypoint="0"/>
+		<move id="M69" waypoint="0"/>
+		<move id="M60" waypoint="0"/>
+	</button>
+
+	<moving id="M71" pos="45,27,0" half="true" theme="gray" active="false">
+		<waypoint to="45,27,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M72" pos="46,27,0" half="true" theme="gray" active="false">
+		<waypoint to="46,27,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M73" pos="47,27,0" half="true" theme="gray" active="false">
+		<waypoint to="47,27,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M74" pos="45,28,0" half="true" theme="gray" active="false">
+		<waypoint to="45,28,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M75" pos="46,28,0" half="true" theme="gray" active="false">
+		<waypoint to="46,28,-64" travel="3!" act="halt"/>
+	</moving>
+	<moving id="M76" pos="47,28,0" half="true" theme="gray" active="false">
+		<waypoint to="47,28,-64" travel="3!" act="halt"/>
+	</moving>
+	<button pos="56,21,2">
+		<move id="M71" waypoint="0"/>
+		<move id="M72" waypoint="0"/>
+		<move id="M73" waypoint="0"/>
+		<move id="M74" waypoint="0"/>
+		<move id="M75" waypoint="0"/>
+		<move id="M76" waypoint="0"/>
+	</button>
+
+	<!-- 2nd encounter -->
+	<prism pos="36,27,2"/>
+	<cameratrigger pos="41,27,1" radius="0,1" time="1!" zoom="2"/>
+	<cameratrigger pos="36,27,2" radius="1,1" time="1!" fov="22"/>
+	<checkpoint pos="36,27,2" radius="1,1" respawn="36,27,2"/>
+
+	<falling pos="36,29,1" float="90" theme="gray"/>
+	<falling pos="36,30,1" float="90" theme="gray"/>
+	<falling pos="36,31,1" float="90" theme="gray"/>
+	<falling pos="36,32,1" float="90" theme="gray"/>
+	<falling pos="36,33,1" float="90" theme="gray"/>
+	<falling pos="36,34,1" float="90" theme="gray"/>
+
+	<falling pos="30,29,1" float="90" theme="gray"/>
+	<falling pos="30,30,1" float="90" theme="gray"/>
+	<falling pos="30,31,1" float="90" theme="gray"/>
+	<falling pos="30,32,1" float="90" theme="gray"/>
+	<falling pos="30,33,1" float="90" theme="gray"/>
+	<falling pos="30,34,1" float="90" theme="gray"/>
+
+	<moving id="E10" pos="35,35,0" half="true" active="false" theme="gray">
+		<waypoint to="32,35,0" travel="2!" act="halt"/>
+	</moving>
+	<moving id="E11" follow="E10" offset="1,0,0" half="true" active="false" theme="gray"/>
+	<moving id="E12" follow="E10" offset="2,0,0" half="true" active="false" theme="gray"/>
+	<moving id="E13" follow="E10" offset="0,1,0" half="true" active="false" theme="gray"/>
+	<moving id="E14" follow="E10" offset="1,1,0" half="true" active="false" theme="gray"/>
+	<moving id="E15" follow="E10" offset="2,1,0" half="true" active="false" theme="gray"/>
+	<moving id="E16" follow="E10" offset="0,2,0" half="true" active="false" theme="gray"/>
+	<moving id="E17" follow="E10" offset="1,2,0" half="true" active="false" theme="gray"/>
+	<moving id="E18" follow="E10" offset="2,2,0" half="true" active="false" theme="gray"/>
+
+	<moving id="E20" follow="E10" offset="0,0,1" half="false" active="false" theme="gray"/>
+	<moving id="E21" follow="E10" offset="1,0,1" half="false" active="false" theme="gray"/>
+	<moving id="E22" follow="E10" offset="2,0,1" half="false" active="false" theme="gray"/>
+	<moving id="E23" follow="E10" offset="0,1,1" half="false" active="false" theme="gray"/>
+	<moving id="E24" follow="E10" offset="1,1,1" half="false" active="false" theme="gray"/>
+	<moving id="E25" follow="E10" offset="2,1,1" half="false" active="false" theme="gray"/>
+	<moving id="E26" follow="E10" offset="0,2,1" half="false" active="false" theme="gray"/>
+	<moving id="E27" follow="E10" offset="1,2,1" half="false" active="false" theme="gray"/>
+	<moving id="E28" follow="E10" offset="2,2,1" half="false" active="false" theme="gray"/>
+
+	<moving id="E30" follow="E10" offset="0,8,0" half="true" active="false" theme="gray"/>
+	<moving id="E31" follow="E10" offset="1,8,0" half="true" active="false" theme="gray"/>
+	<moving id="E32" follow="E10" offset="2,8,0" half="true" active="false" theme="gray"/>
+	<moving id="E33" follow="E10" offset="0,9,0" half="true" active="false" theme="gray"/>
+	<moving id="E34" follow="E10" offset="1,9,0" half="true" active="false" theme="gray"/>
+	<moving id="E35" follow="E10" offset="2,9,0" half="true" active="false" theme="gray"/>
+	<moving id="E36" follow="E10" offset="0,10,0" half="true" active="false" theme="gray"/>
+	<moving id="E37" follow="E10" offset="1,10,0" half="true" active="false" theme="gray"/>
+	<moving id="E38" follow="E10" offset="2,10,0" half="true" active="false" theme="gray"/>
+
+	<moving id="E40" follow="E10" offset="0,8,1" half="false" active="false" theme="gray"/>
+	<moving id="E41" follow="E10" offset="1,8,1" half="false" active="false" theme="gray"/>
+	<moving id="E42" follow="E10" offset="2,8,1" half="false" active="false" theme="gray"/>
+	<moving id="E43" follow="E10" offset="0,9,1" half="false" active="false" theme="gray"/>
+	<moving id="E44" follow="E10" offset="1,9,1" half="false" active="false" theme="gray"/>
+	<moving id="E45" follow="E10" offset="2,9,1" half="false" active="false" theme="gray"/>
+	<moving id="E46" follow="E10" offset="0,10,1" half="false" active="false" theme="gray"/>
+	<moving id="E47" follow="E10" offset="1,10,1" half="false" active="false" theme="gray"/>
+	<moving id="E48" follow="E10" offset="2,10,1" half="false" active="false" theme="gray"/>
+
+	<button pos="31,44,2">
+		<move id="E10" waypoint="0"/>
+		<move id="E11" waypoint="0"/>
+		<move id="E12" waypoint="0"/>
+		<move id="E13" waypoint="0"/>
+		<move id="E14" waypoint="0"/>
+		<move id="E15" waypoint="0"/>
+		<move id="E16" waypoint="0"/>
+		<move id="E17" waypoint="0"/>
+		<move id="E18" waypoint="0"/>
+		<move id="E20" waypoint="0"/>
+		<move id="E21" waypoint="0"/>
+		<move id="E22" waypoint="0"/>
+		<move id="E23" waypoint="0"/>
+		<move id="E24" waypoint="0"/>
+		<move id="E25" waypoint="0"/>
+		<move id="E26" waypoint="0"/>
+		<move id="E27" waypoint="0"/>
+		<move id="E28" waypoint="0"/>
+		<move id="E30" waypoint="0"/>
+		<move id="E31" waypoint="0"/>
+		<move id="E32" waypoint="0"/>
+		<move id="E33" waypoint="0"/>
+		<move id="E34" waypoint="0"/>
+		<move id="E35" waypoint="0"/>
+		<move id="E36" waypoint="0"/>
+		<move id="E37" waypoint="0"/>
+		<move id="E38" waypoint="0"/>
+		<move id="E40" waypoint="0"/>
+		<move id="E41" waypoint="0"/>
+		<move id="E42" waypoint="0"/>
+		<move id="E43" waypoint="0"/>
+		<move id="E44" waypoint="0"/>
+		<move id="E45" waypoint="0"/>
+		<move id="E46" waypoint="0"/>
+		<move id="E47" waypoint="0"/>
+		<move id="E48" waypoint="0"/>
+	</button>
+
+	<falling pos="33,52,1" float="180" theme="gray"/>
+	<falling pos="33,53,1" float="180" theme="gray"/>
+	<falling pos="33,54,1" float="180" theme="gray"/>
+	<falling pos="33,55,1" float="180" theme="gray"/>
+	<falling pos="33,56,1" float="180" theme="gray"/>
+
+	<cameratrigger pos="36,36,2" radius="1,1" time="1!" zoom="3"/>
+	<cameralock id="seq1" eye="30,40,2"/>
+	<button pos="36,36,2" radius="1,1" lock="seq1"/>
+
+	<darkcube spawn="28,24,2" pos="36,36,2" radius="1,1">
+		<event type="southdown" time="104"/>
+		<event type="southup" time="312"/>
+		<event type="westdown" time="24"/>
+		<event type="westup" time="204"/>
+		<event type="southdown" time="28"/>
+		<event type="southup" time="652"/>
+		<event type="eastdown" time="32"/>
+		<event type="eastup" time="84"/>
+		<event type="sync" id="S1" waypoint="1"/>
+		<event type="eastdown" time="0"/>
+		<event type="eastup" time="56"/>
+		<event type="eastdown" time="64"/>
+		<event type="eastup" time="36"/>
+		<event type="eastdown" time="44"/>
+		<event type="eastup" time="36"/>
+		<event type="eastdown" time="48"/>
+		<event type="eastup" time="44"/>
+		<event type="westdown" time="148"/>
+		<event type="westup" time="156"/>
+		<event type="westdown" time="464"/>
+		<event type="westup" time="136"/>
+		<event type="southdown" time="32"/>
+		<event type="southup" time="1208"/>
+		<event type="eastdown" time="40"/>
+		<event type="eastup" time="236"/>
+		<event type="northdown" time="40"/>
+		<event type="northup" time="156"/>
+		<event type="eastdown" time="24"/>
+		<event type="eastup" time="284"/>
+	</darkcube>
+
+	<moving id="S1" pos="28,35,2" active="true" half="false" theme="gray">
+		<waypoint to="28,43,2" travel="1!40" pause="120" act="next"/>
+		<waypoint to="28,35,2" travel="1!40" pause="120" act="loop"/>
+	</moving>
+	<moving follow="S1" offset="0,1,0" active="true" half="false" theme="gray"/>
+	<moving follow="S1" offset="0,2,0" active="true" half="false" theme="gray"/>
+
+	<button pos="33,47,2" radius="0,0" lock="none"/>
+	<cameratrigger pos="30,44,2" radius="1,1" time="1!" zoom="2"/>
+
+	<prism pos="34,44,2"/>
+	<falling pos="26,46,3" float="160" theme="gray"/>
+	<falling pos="27,46,3" float="160" theme="gray"/>
+	<falling pos="26,47,3" float="160" theme="gray"/>
+	<falling pos="27,47,3" float="160" theme="gray"/>
+
+	<checkpoint pos="33,44,2" radius="1,1" respawn="33,44,2"/>
+
+	<!-- 3rd encounter -->
+	<prism pos="12,39,2"/>
+	<falling pos="20,40,3" float="80" theme="gray"/>
+	<falling pos="21,40,3" float="80" theme="gray"/>
+	<falling pos="22,40,3" float="80" theme="gray"/>
+	<falling pos="23,40,3" float="80" theme="gray"/>
+	<falling pos="24,40,3" float="80" theme="gray"/>
+	<falling pos="25,40,3" float="80" theme="gray"/>
+
+	<moving id="S2" pos="10,26,0" active="true" half="true" theme="gray">
+		<waypoint to="11,26,0" travel="60" pause="320" act="next"/>
+		<waypoint to="10,26,0" travel="120" pause="240" act="loop"/>
+	</moving>
+	<moving follow="S2" offset="0,1,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,2,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,3,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,4,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,5,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,6,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,7,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,8,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,9,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,10,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,11,0" active="true" half="true" theme="gray"/>
+	<moving follow="S2" offset="0,12,0" active="true" half="true" theme="gray"/>
+
+	<moving follow="S2" offset="0,0,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,1,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,2,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,3,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,4,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,5,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,6,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,7,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,8,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,9,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,10,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,11,1" active="true" half="false" theme="gray"/>
+	<moving follow="S2" offset="0,12,1" active="true" half="false" theme="gray"/>
+
+	<moving id="F10" pos="18,40,0" active="false" half="true" theme="gray">
+		<waypoint to="13,40,0" travel="3!" act="halt"/>
+	</moving>
+	<moving id="F11" follow="F10" offset="1,0,0" active="false" half="true" theme="gray"/>
+	<moving id="F12" follow="F10" offset="0,1,0" active="false" half="true" theme="gray"/>
+	<moving id="F13" follow="F10" offset="1,1,0" active="false" half="true" theme="gray"/>
+
+	<moving id="F14" follow="F10" offset="0,0,1" active="false" half="false" theme="gray"/>
+	<moving id="F15" follow="F10" offset="1,0,1" active="false" half="false" theme="gray"/>
+	<moving id="F16" follow="F10" offset="0,1,1" active="false" half="false" theme="gray"/>
+	<moving id="F17" follow="F10" offset="1,1,1" active="false" half="false" theme="gray"/>
+
+	<moving id="F20" follow="F10" offset="0,-16,0" active="false" half="true" theme="gray"/>
+	<moving id="F21" follow="F10" offset="1,-16,0" active="false" half="true" theme="gray"/>
+	<moving id="F22" follow="F10" offset="0,-15,0" active="false" half="true" theme="gray"/>
+	<moving id="F23" follow="F10" offset="1,-15,0" active="false" half="true" theme="gray"/>
+
+	<moving id="F24" follow="F10" offset="0,-16,1" active="false" half="false" theme="gray"/>
+	<moving id="F25" follow="F10" offset="1,-16,1" active="false" half="false" theme="gray"/>
+	<moving id="F26" follow="F10" offset="0,-15,1" active="false" half="false" theme="gray"/>
+	<moving id="F27" follow="F10" offset="1,-15,1" active="false" half="false" theme="gray"/>
+
+	<button pos="12,24,2" lock="none">
+		<move id="F10" waypoint="0"/>
+		<move id="F11" waypoint="0"/>
+		<move id="F12" waypoint="0"/>
+		<move id="F13" waypoint="0"/>
+		<move id="F14" waypoint="0"/>
+		<move id="F15" waypoint="0"/>
+		<move id="F16" waypoint="0"/>
+		<move id="F17" waypoint="0"/>
+		<move id="F20" waypoint="0"/>
+		<move id="F21" waypoint="0"/>
+		<move id="F22" waypoint="0"/>
+		<move id="F23" waypoint="0"/>
+		<move id="F24" waypoint="0"/>
+		<move id="F25" waypoint="0"/>
+		<move id="F26" waypoint="0"/>
+		<move id="F27" waypoint="0"/>
+	</button>
+
+	<cameralock id="seq2" eye="12,32,2"/>
+	<button pos="19,40,2" radius="1,1" lock="seq2"/>
+	<cameratrigger pos="19,40,2" radius="1,1" time="1!" zoom="3"/>
+	<darkcube pos="19,40,2" radius="1,1" spawn="10,44,2">
+		<event type="northdown" time="144"/>
+		<event type="northup" time="220"/>
+		<event type="westdown" time="28"/>
+		<event type="westup" time="84"/>
+		<event type="northdown" time="32"/>
+		<event type="northup" time="148"/>
+		<event type="sync" id="S2" waypoint="0"/>
+		<event type="northdown" time="0"/>
+		<event type="northup" time="284"/>
+		<event type="eastdown" time="12"/>
+		<event type="eastup" time="80"/>
+		<event type="eastdown" time="56"/>
+		<event type="eastup" time="40"/>
+		<event type="eastdown" time="40"/>
+		<event type="eastup" time="40"/>
+		<event type="eastdown" time="48"/>
+		<event type="eastup" time="36"/>
+		<event type="eastdown" time="36"/>
+		<event type="eastup" time="28"/>
+		<event type="eastdown" time="36"/>
+		<event type="eastup" time="24"/>
+		<event type="northdown" time="64"/>
+		<event type="northup" time="172"/>
+		<event type="eastdown" time="28"/>
+		<event type="eastup" time="68"/>
+		<event type="eastdown" time="64"/>
+		<event type="eastup" time="44"/>
+		<event type="eastdown" time="44"/>
+		<event type="eastup" time="40"/>
+		<event type="eastdown" time="44"/>
+		<event type="eastup" time="36"/>
+		<event type="eastdown" time="40"/>
+		<event type="eastup" time="32"/>
+		<event type="eastdown" time="32"/>
+		<event type="eastup" time="36"/>
+		<event type="northdown" time="92"/>
+		<event type="northup" time="248"/>
+		<event type="eastdown" time="20"/>
+		<event type="eastup" time="76"/>
+		<event type="eastdown" time="48"/>
+		<event type="eastup" time="40"/>
+		<event type="eastdown" time="40"/>
+		<event type="eastup" time="40"/>
+		<event type="eastdown" time="40"/>
+		<event type="eastup" time="28"/>
+		<event type="eastdown" time="32"/>
+		<event type="eastup" time="32"/>
+		<event type="northdown" time="84"/>
+		<event type="northup" time="252"/>
+		<event type="eastdown" time="12"/>
+		<event type="eastup" time="88"/>
+		<event type="eastdown" time="64"/>
+		<event type="eastup" time="40"/>
+		<event type="eastdown" time="40"/>
+		<event type="eastup" time="40"/>
+		<event type="eastdown" time="36"/>
+		<event type="eastup" time="32"/>
+		<event type="eastdown" time="36"/>
+		<event type="eastup" time="24"/>
+		<event type="northdown" time="84"/>
+		<event type="northup" time="240"/>
+		<event type="westdown" time="32"/>
+		<event type="westup" time="76"/>
+		<event type="westdown" time="740"/>
+		<event type="westup" time="68"/>
+		<event type="northdown" time="28"/>
+		<event type="northup" time="464"/>
+		<event type="eastdown" time="52"/>
+		<event type="eastup" time="835"/>
+		<event type="northdown" time="40"/>
+		<event type="northup" time="732"/>
+	</darkcube>
+
+	<prism pos="12,25,2"/>
+	<checkpoint pos="12,40,2" radius="1,1" respawn="12,40,2"/>
+	<checkpoint pos="12,24,2" radius="1,1" respawn="11,25,2"/>
+
+	<falling pos="7,19,1" float="80" theme="gray"/>
+	<falling pos="8,19,1" float="80" theme="gray"/>
+	<falling pos="9,19,1" float="80" theme="gray"/>
+	<falling pos="10,19,1" float="80" theme="gray"/>
+
+	<falling pos="17,12,0" float="80" theme="gray"/>
+	<falling pos="17,13,0" float="80" theme="gray"/>
+	<falling pos="17,14,0" float="80" theme="gray"/>
+
+	<cameratrigger pos="12,39,2" radius="1,1" time="1!" zoom="2"/>
+
+	<!-- 4th encounter -->
+	<moving id="G0" pos="17,10,0" active="false" theme="gray" half="true">
+		<waypoint to="17,6,0" travel="3!" act="halt"/>
+	</moving>
+	<moving id="G1" follow="G0" offset="1,0,0" active="false" theme="gray" half="true"/>
+	<moving id="G2" follow="G0" offset="0,1,0" active="false" theme="gray" half="true"/>
+	<moving id="G3" follow="G0" offset="1,1,0" active="false" theme="gray" half="true"/>
+
+	<button pos="23,1,3" lock="none">
+		<move id="G0" waypoint="0"/>
+		<move id="G1" waypoint="0"/>
+		<move id="G2" waypoint="0"/>
+		<move id="G3" waypoint="0"/>
+	</button>
+
+	<moving id="S3" pos="15,5,1" half="false" theme="gray" active="true">
+		<waypoint to="19,5,1" travel="1!" pause="160" act="next"/>
+		<waypoint to="15,5,1" travel="1!" pause="160" act="loop"/>
+	</moving>
+	<moving follow="S3" offset="1,0,0" half="false" theme="gray" active="true"/>
+	<moving follow="S3" offset="4,-2,1" half="false" theme="gray" active="true"/>
+	<moving follow="S3" offset="5,-2,1" half="false" theme="gray" active="true"/>
+
+	<cameralock id="seq3" eye="20,5,1"/>
+	<button pos="17,11,1" radius="0,0" lock="seq3"/>
+	<cameratrigger pos="17,11,1" radius="0,0" time="60" zoom="3"/>
+	<cameratrigger pos="17,6,1" radius="1,1" time="1!" zoom="2"/>
+	<darkcube pos="17,11,1" spawn="9,7,1">
+		<event type="westdown" time="252"/>
+		<event type="westup" time="444"/>
+		<event type="northdown" time="16"/>
+		<event type="northup" time="84"/>
+		<event type="sync" id="S3" waypoint="1"/>
+		<event type="northdown" time="0"/>
+		<event type="northup" time="64"/>
+		<event type="northdown" time="64"/>
+		<event type="northup" time="44"/>
+		<event type="northdown" time="56"/>
+		<event type="northup" time="36"/>
+		<event type="northdown" time="52"/>
+		<event type="northup" time="40"/>
+		<event type="northdown" time="28"/>
+		<event type="northup" time="240"/>
+		<event type="sync" id="S3" waypoint="1"/>
+		<event type="northdown" time="0"/>
+		<event type="northup" time="56"/>
+		<event type="northdown" time="64"/>
+		<event type="northup" time="44"/>
+		<event type="northdown" time="56"/>
+		<event type="northup" time="44"/>
+		<event type="northdown" time="44"/>
+		<event type="northup" time="36"/>
+		<event type="northdown" time="36"/>
+		<event type="northup" time="272"/>
+		<event type="eastdown" time="380"/>
+		<event type="eastup" time="364"/>
+		<event type="southdown" time="24"/>
+		<event type="southup" time="148"/>
+		<event type="eastdown" time="28"/>
+		<event type="eastup" time="1172"/>
+		<event type="northdown" time="28"/>
+		<event type="northup" time="176"/>
+	</darkcube>
+	<falling pos="13,3,3" float="80" theme="gray"/>
+	<falling pos="14,3,3" float="80" theme="gray"/>
+
+	<checkpoint pos="17,6,1" radius="1,1" respawn="17,7,1"/>
+
+	<falling pos="25,1,1" float="100" theme="gray"/>
+	<falling pos="26,1,1" float="100" theme="gray"/>
+	<falling pos="27,1,1" float="100" theme="gray"/>
+	<falling pos="28,1,1" float="100" theme="gray"/>
+	<falling pos="29,1,1" float="100" theme="gray"/>
+	<falling pos="30,1,1" float="100" theme="gray"/>
+
+	<cameratrigger pos="23,1,3" radius="1,1" time="1!" fov="44"/>
+	<bumper id="BF" pos="24,1,2" dir="west" theme="gray" bump="80" pause="80" active="false"/>
+	<button pos="25,1,2" radius="0,0">
+		<bump id="BF" act="enable"/>
+	</button>
+</level>

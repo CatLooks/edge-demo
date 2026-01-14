@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<level id="101" name="first contact" music="kakkoi" theme="white" zoom="2" time="19,25,37,69" size="20x16x4" spawn="17,8,40" exit="2,8,1">
+	<prism pos="17,14,2"/>
+	<prism pos="11,12,2"/>
+	<prism pos="5,2,1"/>
+	<prism pos="-1,0,3"/>
+</level>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<world>
+	<route pos="5,5,1" mini="false" theme="white" file="first_contact">
+		<effects></effects>
+		<path>
+			<event type="northdown" time="0"/>
+			<event type="northup" time="300"/>
+		</path>
+	</route>
+	<route pos="5,1,1" mini="false" theme="blue" file="click">
+		<effects>
+			<press id="0"/>
+		</effects>
+		<path>
+			<event type="westdown" time="0"/>
+			<event type="westup" time="300"/>
+			<event type="southdown" time="30"/>
+			<event type="southup" time="300"/>
+		</path>
+	</route>
+	<route pos="9,5,1" mini="false" theme="black" file="bump">
+		<effects></effects>
+		<path>
+			<event type="southdown" time="0"/>
+			<event type="southup" time="300"/>
+			<event type="eastdown" time="30"/>
+			<event type="eastup" time="300"/>
+		</path>
+	</route>
+	<route pos="5,9,1" mini="false" theme="white" file="chunk">
+		<effects></effects>
+		<path>
+			<event type="eastdown" time="0"/>
+			<event type="eastup" time="300"/>
+			<event type="northdown" time="30"/>
+			<event type="northup" time="300"/>
+		</path>
+	</route>
+	<route pos="1,5,1" mini="false" theme="gray" file="edgetime">
+		<effects></effects>
+		<path>
+			<event type="northdown" time="0"/>
+			<event type="northup" time="300"/>
+		</path>
+	</route>
+	<darkprism id="4"/>
+</world>

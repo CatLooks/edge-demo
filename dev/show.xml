@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<level id="420" name="show" time="0,0,0,0" size="100x100x5" spawn="1,1,1" exit="10,10,1" zoom="3" theme="white" music="kakkoi">
+	<!-- prism speed demo -->
+	<prism pos="10,1,1"/>
+	<button lock="demoExit" pos="20,1,1" pressed="false" stayup="false"/>
+	<button lock="demoMPFP" pos="21,1,1" pressed="false" stayup="false"/>
+	<button lock="demoBump" pos="22,1,1" pressed="false" stayup="false"/>
+	<button lock="demoMini" pos="23,1,1" pressed="false" stayup="false"/>
+	<button lock="demoBAct" pos="24,1,1" pressed="false" stayup="false"/>
+	<button lock="demoEdge" pos="25,1,1" pressed="false" stayup="false"/>
+	<button lock="demoCam" pos="26,1,1" pressed="false" stayup="false"/>
+
+	<!-- camera demo -->
+	<cameralock id="demoCam" eye="30,38,1"/>
+	<teleporter pos="26,1,1" target="29,37,1"/>
+	<checkpoint pos="29,39,1" respawn="26,0,1" time="1!" theme="gray"/>
+	<cameratrigger pos="31,39,1" time="1!" zoom="2"/>
+	<cameratrigger pos="31,37,1" time="1!" fov="44"/>
+
+	<!-- level exit demo -->
+	<cameralock id="demoExit" eye="6,10,2"/>
+
+	<darkcube pos="20,1,1" spawn="1,10,65" rainbow="true">
+		<event type="westdown" time="1399"/>
+		<event type="westup" time="440"/>
+		<event type="westdown" time="272"/>
+		<event type="westup" time="280"/>
+	</darkcube>
+
+	<button pos="7,10,2" pressed="false" stayup="false" radius="0,1">
+		<move id="DE1" waypoint="0"/>
+		<move id="DE2" waypoint="0"/>
+		<move id="DE3" waypoint="0"/>
+		<move id="DE4" waypoint="0"/>
+		<move id="DE5" waypoint="0"/>
+		<move id="DE6" waypoint="0"/>
+		<move id="DE7" waypoint="0"/>
+		<move id="DE8" waypoint="0"/>
+		<move id="DE9" waypoint="0"/>
+	</button>
+
+	<moving id="DE1" pos="9,9,1" half="false" active="false" theme="white">
+		<waypoint to="9,9,1" travel="0" pause="0" act="next"/>
+		<waypoint to="9,9,65" travel="4!" pause="0" act="halt"/>
+	</moving>
+	<moving id="DE2" pos="10,9,1" half="false" active="false" theme="white">
+		<waypoint to="10,9,1" travel="0" pause="20" act="next"/>
+		<waypoint to="10,9,65" travel="4!" pause="0" act="halt"/>
+	</moving>
+	<moving id="DE3" pos="11,9,1" half="false" active="false" theme="white">
+		<waypoint to="11,9,1" travel="0" pause="40" act="next"/>
+		<waypoint to="11,9,65" travel="4!" pause="0" act="halt"/>
+	</moving>
+	<moving id="DE4" pos="9,10,1" half="false" active="false" theme="white">
+		<waypoint to="9,10,1" travel="0" pause="20" act="next"/>
+		<waypoint to="9,10,65" travel="4!" pause="0" act="halt"/>
+	</moving>
+	<moving id="DE5" pos="10,10,1" half="false" active="false" theme="white">
+		<waypoint to="10,10,1" travel="0" pause="40" act="next"/>
+		<waypoint to="10,10,65" travel="4!" pause="0" act="halt"/>
+	</moving>
+	<moving id="DE6" pos="11,10,1" half="false" active="false" theme="white">
+		<waypoint to="11,10,1" travel="0" pause="60" act="next"/>
+		<waypoint to="11,10,65" travel="4!" pause="0" act="halt"/>
+	</moving>
+	<moving id="DE7" pos="9,11,1" half="false" active="false" theme="white">
+		<waypoint to="9,11,1" travel="0" pause="40" act="next"/>
+		<waypoint to="9,11,65" travel="4!" pause="0" act="halt"/>
+	</moving>
+	<moving id="DE8" pos="10,11,1" half="false" active="false" theme="white">
+		<waypoint to="10,11,1" travel="0" pause="60" act="next"/>
+		<waypoint to="10,11,65" travel="4!" pause="0" act="halt"/>
+	</moving>
+	<moving id="DE9" pos="11,11,1" half="false" active="false" theme="white">
+		<waypoint to="11,11,1" travel="0" pause="80" act="next"/>
+		<waypoint to="11,11,65" travel="4!" pause="0" act="halt"/>
+	</moving>
+
+	<!-- mp & fp demo -->
+	<cameralock id="demoMPFP" eye="13,21,1"/>
+
+	<darkcube pos="21,1,1" spawn="1,21,18" rainbow="true">
+		<event type="westdown" time="380"/>
+		<event type="westup" time="444"/>
+		<event type="sync" id="MPFPsync" waypoint="1"/>
+		<event type="westdown" time="0"/>
+		<event type="westup" time="72"/>
+		<event type="westdown" time="196"/>
+		<event type="westup" time="943"/>
+	</darkcube>
+
+	<moving id="MPFPsync" pos="7,20,0" half="true" active="true" theme="black">
+		<waypoint to="11,20,0" travel="120" pause="120" act="next"/>
+		<waypoint to="7,20,0" travel="120" pause="120" act="loop"/>
+	</moving>
+	<moving pos="8,20,0" half="true" active="true" theme="black">
+		<waypoint to="12,20,0" travel="120" pause="120" act="next"/>
+		<waypoint to="8,20,0" travel="120" pause="120" act="loop"/>
+	</moving>
+	<moving pos="8,21,0" half="true" active="true" theme="black">
+		<waypoint to="12,21,0" travel="120" pause="120" act="next"/>
+		<waypoint to="8,21,0" travel="120" pause="120" act="loop"/>
+	</moving>
+	<moving pos="8,22,0" half="true" active="true" theme="black">
+		<waypoint to="12,22,0" travel="120" pause="120" act="next"/>
+		<waypoint to="8,22,0" travel="120" pause="120" act="loop"/>
+	</moving>
+	<moving pos="9,22,0" half="true" active="true" theme="black">
+		<waypoint to="13,22,0" travel="120" pause="120" act="next"/>
+		<waypoint to="9,22,0" travel="120" pause="120" act="loop"/>
+	</moving>
+
+	<moving id="MPFPesc" pos="24,21,1" half="false" active="false" theme="white">
+		<waypoint to="24,21,65" travel="4!" act="halt"/>
+	</moving>
+	<button moving="MPFPesc" pressed="false" radius="0,0" stayup="false">
+		<move id="MPFPesc" waypoint="0"/>
+	</button>
+
+	<falling pos="17,21,0" float="120" theme="black"/>
+	<falling pos="18,21,0" float="120" theme="black"/>
+	<falling pos="19,21,0" float="120" theme="black"/>
+	<falling pos="20,21,0" float="120" theme="black"/>
+	<falling pos="21,21,0" float="120" theme="black"/>
+	<falling pos="22,21,0" float="120" theme="black"/>
+
+	<!-- bumper demo -->
+	<cameralock id="demoBump" eye="40,19,1"/>
+
+	<darkcube pos="22,1,1" spawn="37,21,16" rainbow="true">
+		<event type="sync" id="BPS" waypoint="0"/>
+		<event type="northdown" time="416"/>
+		<event type="northup" time="372"/>
+		<event type="westdown" time="312"/>
+		<event type="westup" time="68"/>
+		<event type="westdown" time="60"/>
+		<event type="westup" time="112"/>
+		<event type="southdown" time="224"/>
+		<event type="southup" time="76"/>
+	</darkcube>
+	<moving id="BPS" pos="37,13,1" half="false" active="true" theme="white">
+		<waypoint to="43,13,1" travel="120" pause="120" act="next"/>
+		<waypoint to="37,13,1" travel="120" pause="120" act="loop"/>
+	</moving>
+
+	<bumper pos="36,16,1" dir="west" bump="60" pause="180" theme="white" active="true"/>
+	<bumper pos="43,15,1" dir="south" bump="60" pause="180" theme="white" active="true"/>
+
+	<moving id="bumpEsc" pos="43,21,0" half="true" active="false" theme="white">
+		<waypoint to="43,21,64" travel="4!" act="halt"/>
+	</moving>
+	<button moving="bumpEsc" pressed="false" radius="0,0" stayup="false">
+		<move id="bumpEsc" waypoint="0"/>
+	</button>
+
+	<!-- mini demo -->
+	<cameralock id="demoMini" eye="63,20,1"/>
+
+	<darkcube pos="23,1,1" spawn="61,13,3" rainbow="true">
+		<event type="southdown" time="276"/>
+		<event type="southup" time="520"/>
+		<event type="westdown" time="40"/>
+		<event type="westup" time="140"/>
+		<event type="northdown" time="68"/>
+		<event type="northup" time="64"/>
+		<event type="northdown" time="88"/>
+		<event type="northup" time="32"/>
+		<event type="southdown" time="292"/>
+		<event type="southup" time="104"/>
+		<event type="northdown" time="76"/>
+		<event type="northup" time="863"/>
+	</darkcube>
+
+	<shrink pos="63,21,1" visible="true"/>
+	<falling pos="61,17,2" float="120" theme="white"/>
+	<falling pos="61,18,2" float="120" theme="white"/>
+	<falling pos="61,19,2" float="120" theme="white"/>
+	<falling pos="61,20,2" float="120" theme="white"/>
+	<falling pos="62,20,2" float="120" theme="white"/>
+	<falling pos="63,20,2" float="120" theme="white"/>
+
+	<!-- button demo -->
+	<cameralock id="demoBAct" eye="79,21,1"/>
+
+	<darkcube pos="24,1,1" spawn="75,21,17" rainbow="true">
+		<event type="westdown" time="456"/>
+		<event type="westup" time="412"/>
+	</darkcube>
+
+	<bumper id="ActB" pos="75,21,1" dir="west" active="false" theme="blue" bump="60" pause="180"/>
+	<button id="ActC" pos="75,21,2" pressed="true" stayup="false"/>
+	<moving id="ActM" pos="80,21,5" active="false" theme="blue" half="false">
+		<waypoint to="75,21,5" travel="120" act="halt"/>
+	</moving>
+
+	<button pos="80,21,1" pressed="false" stayup="false">
+		<move id="ActM" waypoint="0"/>
+		<click id="ActC" pressed="false"/>
+		<bump id="ActB" act="enable"/>
+	</button>
+
+	<!-- edge demo -->
+	<cameralock id="demoEdge" eye="5,38,1"/>
+
+	<darkcube pos="25,1,1" spawn="1,38,1" rainbow="true">
+		<event type="westdown" time="3!84"/>
+		<event type="westup" time="80"/>
+		<event type="northdown" time="32"/>
+		<event type="northup" time="88"/>
+		<event type="sync" id="MPS" waypoint="0"/>
+		<event type="northdown" time="0"/>
+		<event type="northup" time="56"/>
+		<event type="northdown" time="56"/>
+		<event type="northup" time="44"/>
+		<event type="northdown" time="44"/>
+		<event type="northup" time="40"/>
+		<event type="northdown" time="40"/>
+		<event type="northup" time="40"/>
+		<event type="northdown" time="48"/>
+		<event type="northup" time="32"/>
+		<event type="northdown" time="32"/>
+		<event type="northup" time="20"/>
+		<event type="southdown" time="64"/>
+		<event type="southup" time="96"/>
+		<event type="westdown" time="20"/>
+		<event type="westup" time="92"/>
+	</darkcube>
+
+	<moving id="MPS" pos="2,36,1" active="true" theme="white" half="false">
+		<waypoint to="7,36,1" travel="180" pause="60" act="next"/>
+		<waypoint to="2,36,1" travel="180" pause="60" act="loop"/>
+	</moving>
+
+	<moving id="edgeEsc" pos="8,38,0" half="true" active="false" theme="gray">
+		<waypoint to="8,38,0" travel="40" pause="20" act="next"/>
+		<waypoint to="8,38,0" travel="40" pause="20" act="next"/>
+		<waypoint to="8,38,0" travel="40" pause="80" act="next"/>
+		<waypoint to="8,38,64" travel="4!" act="halt"/>
+	</moving>
+	<moving id="edgeClamp" pos="7,36,3" half="false" active="false" theme="white">
+		<waypoint to="7,38,3" travel="40" pause="20" act="next"/>
+		<waypoint to="8,38,3" travel="40" pause="20" act="next"/>
+		<waypoint to="8,38,2" travel="40" pause="80" act="next"/>
+		<waypoint to="8,38,66" travel="4!" act="halt"/>
+	</moving>
+	<button moving="edgeEsc" pressed="false" radius="0,0" stayup="false">
+		<move id="edgeEsc" waypoint="0"/>
+		<move id="edgeClamp" waypoint="0"/>
+	</button>
+</level>

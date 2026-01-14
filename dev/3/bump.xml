@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<level id="103" name="bump" time="70,86,121,178" music="duty" theme="black" zoom="1" size="48x18x6" spawn="1,12,1" exit="33,9,4">
+	<!-- bumper way -->
+
+	<bumper id="B1" pos="0,6,1" dir="west" theme="black" bump="80" pause="80" active="false"/>
+	<button pos="1,6,1" stayup="true"><bump id="B1" act="once"/></button>
+
+	<bumper id="B2" pos="6,7,1" dir="north" theme="black" bump="80" pause="80" active="false"/>
+	<button pos="6,6,1" stayup="true"><bump id="B2" act="once"/></button>
+
+	<bumper id="B3" pos="5,3,1" dir="west" theme="black" bump="80" pause="80" active="false"/>
+	<button pos="6,3,1" stayup="true"><bump id="B3" act="once"/></button>
+
+	<bumper id="B4" pos="9,2,1" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<button pos="9,3,1" stayup="true"><bump id="B4" act="once"/></button>
+
+	<bumper id="B5" pos="8,11,1" dir="west" theme="black" bump="80" pause="80" active="false"/>
+	<button pos="9,11,1" stayup="true"><bump id="B5" act="once"/></button>
+
+	<prism pos="6,6,1"/>
+	<prism pos="12,11,1"/>
+
+	<checkpoint pos="12,11,1" respawn="12,11,1"/>
+	<cameratrigger pos="12,11,1" time="1!" zoom="2"/>
+
+	<!-- bumper hill -->
+
+	<bumper id="H11" pos="15,8,1" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H12" pos="16,8,1" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H13" pos="17,7,1" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H14" pos="18,6,1" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H15" pos="19,8,1" dir="south" theme="black" bump="80" pause="80" active="false"/>
+
+	<bumper id="H21" pos="15,5,2" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H22" pos="16,6,2" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H23" pos="17,4,2" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H24" pos="18,4,2" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H25" pos="19,4,2" dir="south" theme="black" bump="80" pause="80" active="false"/>
+
+	<bumper id="H31" pos="15,4,3" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H32" pos="16,2,3" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H33" pos="17,3,3" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H34" pos="18,3,3" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H35" pos="19,3,3" dir="south" theme="black" bump="80" pause="80" active="false"/>
+
+	<bumper id="H41" pos="15,0,4" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H42" pos="16,0,4" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H43" pos="17,0,4" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H44" pos="18,2,4" dir="south" theme="black" bump="80" pause="80" active="false"/>
+	<bumper id="H45" pos="19,2,4" dir="south" theme="black" bump="80" pause="80" active="false"/>
+
+	<button pos="15,9,1" radius="0,0" stayup="true"><bump id="H11" act="once"/><bump id="H12" act="once"/><bump id="H13" act="once"/><bump id="H14" act="once"/><bump id="H15" act="once"/></button>
+	<button pos="16,9,1" radius="0,0" stayup="true"><bump id="H11" act="once"/><bump id="H12" act="once"/><bump id="H13" act="once"/><bump id="H14" act="once"/><bump id="H15" act="once"/></button>
+	<button pos="17,8,1" radius="0,0" stayup="true"><bump id="H11" act="once"/><bump id="H12" act="once"/><bump id="H13" act="once"/><bump id="H14" act="once"/><bump id="H15" act="once"/></button>
+	<button pos="18,7,1" radius="0,0" stayup="true"><bump id="H11" act="once"/><bump id="H12" act="once"/><bump id="H13" act="once"/><bump id="H14" act="once"/><bump id="H15" act="once"/></button>
+	<button pos="19,9,1" radius="0,0" stayup="true"><bump id="H11" act="once"/><bump id="H12" act="once"/><bump id="H13" act="once"/><bump id="H14" act="once"/><bump id="H15" act="once"/></button>
+
+	<button pos="15,6,2" radius="0,0" stayup="true"><bump id="H21" act="once"/><bump id="H22" act="once"/><bump id="H23" act="once"/><bump id="H24" act="once"/><bump id="H25" act="once"/></button>
+	<button pos="16,7,2" radius="0,0" stayup="true"><bump id="H21" act="once"/><bump id="H22" act="once"/><bump id="H23" act="once"/><bump id="H24" act="once"/><bump id="H25" act="once"/></button>
+	<button pos="17,5,2" radius="0,0" stayup="true"><bump id="H21" act="once"/><bump id="H22" act="once"/><bump id="H23" act="once"/><bump id="H24" act="once"/><bump id="H25" act="once"/></button>
+	<button pos="18,5,2" radius="0,0" stayup="true"><bump id="H21" act="once"/><bump id="H22" act="once"/><bump id="H23" act="once"/><bump id="H24" act="once"/><bump id="H25" act="once"/></button>
+	<button pos="19,5,2" radius="0,0" stayup="true"><bump id="H21" act="once"/><bump id="H22" act="once"/><bump id="H23" act="once"/><bump id="H24" act="once"/><bump id="H25" act="once"/></button>
+
+	<button pos="15,5,3" radius="0,0" stayup="true"><bump id="H31" act="once"/><bump id="H32" act="once"/><bump id="H33" act="once"/><bump id="H34" act="once"/><bump id="H35" act="once"/></button>
+	<button pos="16,3,3" radius="0,0" stayup="true"><bump id="H31" act="once"/><bump id="H32" act="once"/><bump id="H33" act="once"/><bump id="H34" act="once"/><bump id="H35" act="once"/></button>
+	<button pos="17,4,3" radius="0,0" stayup="true"><bump id="H31" act="once"/><bump id="H32" act="once"/><bump id="H33" act="once"/><bump id="H34" act="once"/><bump id="H35" act="once"/></button>
+	<button pos="18,4,3" radius="0,0" stayup="true"><bump id="H31" act="once"/><bump id="H32" act="once"/><bump id="H33" act="once"/><bump id="H34" act="once"/><bump id="H35" act="once"/></button>
+	<button pos="19,4,3" radius="0,0" stayup="true"><bump id="H31" act="once"/><bump id="H32" act="once"/><bump id="H33" act="once"/><bump id="H34" act="once"/><bump id="H35" act="once"/></button>
+
+	<button pos="15,1,4" radius="0,0" stayup="true"><bump id="H41" act="once"/><bump id="H42" act="once"/><bump id="H43" act="once"/><bump id="H44" act="once"/><bump id="H45" act="once"/></button>
+	<button pos="16,1,4" radius="0,0" stayup="true"><bump id="H41" act="once"/><bump id="H42" act="once"/><bump id="H43" act="once"/><bump id="H44" act="once"/><bump id="H45" act="once"/></button>
+	<button pos="17,1,4" radius="0,0" stayup="true"><bump id="H41" act="once"/><bump id="H42" act="once"/><bump id="H43" act="once"/><bump id="H44" act="once"/><bump id="H45" act="once"/></button>
+	<button pos="18,3,4" radius="0,0" stayup="true"><bump id="H41" act="once"/><bump id="H42" act="once"/><bump id="H43" act="once"/><bump id="H44" act="once"/><bump id="H45" act="once"/></button>
+	<button pos="19,3,4" radius="0,0" stayup="true"><bump id="H41" act="once"/><bump id="H42" act="once"/><bump id="H43" act="once"/><bump id="H44" act="once"/><bump id="H45" act="once"/></button>
+
+	<bumper id="HE" pos="19,1,4" dir="west" theme="black" bump="80" pause="80" active="false" power="3"/>
+	<button pos="20,1,4" radius="0,0">
+		<bump id="HE" act="once"/>
+	</button>
+
+	<falling pos="20,1,3" float="80" theme="black"/>
+	<falling pos="21,1,3" float="80" theme="black"/>
+	<falling pos="22,1,3" float="80" theme="black"/>
+	<falling pos="23,1,3" float="80" theme="black"/>
+
+	<prism pos="24,1,4"/>
+	<checkpoint pos="24,1,4" respawn="24,1,4"/>
+	<cameratrigger pos="24,1,4" time="1!" zoom="1"/>
+
+	<bumper pos="23,4,4" dir="west" theme="black" bump="60" pause="300" active="true" phase="0"/>
+	<bumper pos="23,5,4" dir="west" theme="black" bump="60" pause="300" active="true" phase="90"/>
+	<bumper pos="23,6,4" dir="west" theme="black" bump="60" pause="300" active="true" phase="180"/>
+
+	<cameratrigger pos="26,5,4" radius="1,1" time="120" zoom="2"/>
+
+	<bumper pos="23,10,4" dir="west" theme="black" bump="60" pause="360" active="true" phase="0"/>
+	<bumper pos="23,11,4" dir="west" theme="black" bump="60" pause="360" active="true" phase="60"/>
+	<bumper pos="23,12,4" dir="west" theme="black" bump="60" pause="360" active="true" phase="120"/>
+	<bumper pos="23,13,4" dir="west" theme="black" bump="60" pause="360" active="true" phase="180"/>
+	<bumper pos="23,14,4" dir="west" theme="black" bump="60" pause="360" active="true" phase="240"/>
+
+	<prism pos="27,12,4"/>
+	<falling pos="25,8,3" float="60" theme="black"/>
+	<falling pos="26,8,3" float="60" theme="black"/>
+	<falling pos="27,8,3" float="60" theme="black"/>
+	<falling pos="27,9,3" float="60" theme="black"/>
+	<falling pos="27,10,3" float="60" theme="black"/>
+	<falling pos="27,11,3" float="60" theme="black"/>
+	<falling pos="28,12,3" float="60" theme="black"/>
+
+	<!-- outer building -->
+
+	<cameratrigger pos="24,17,4" time="1!" zoom="2"/>
+	<moving id="MP" pos="24,17,3" half="true" theme="black" active="false">
+		<waypoint to="24,17,0" travel="120" act="halt"/>
+	</moving>
+	<button moving="MP">
+		<move id="MP" waypoint="0"/>
+	</button>
+
+	<bumper id="BE" pos="23,17,1" dir="west" theme="black" bump="80" pause="80" active="false"/>
+	<button pos="24,17,1" radius="0,0">
+		<bump id="BE" act="once"/>
+	</button>
+
+	<falling pos="28,17,0" float="60" theme="black"/>
+	<falling pos="29,17,0" float="60" theme="black"/>
+	<falling pos="30,17,0" float="60" theme="black"/>
+	<falling pos="31,17,0" float="60" theme="black"/>
+
+	<prism pos="27,17,1"/>
+	<prism pos="32,14,1"/>
+	<checkpoint pos="32,17,1" respawn="32,17,1"/>
+
+	<moving pos="34,16,0" half="true" active="true" theme="black">
+		<waypoint to="34,17,0" travel="80" pause="120" act="next"/>
+		<waypoint to="34,16,0" travel="180" pause="20" act="loop"/>
+	</moving>
+	<moving pos="35,16,0" half="true" active="true" theme="black">
+		<waypoint to="35,17,0" travel="100" pause="140" act="next"/>
+		<waypoint to="35,16,0" travel="210" pause="30" act="loop"/>
+	</moving>
+	<moving pos="36,16,0" half="true" active="true" theme="black">
+		<waypoint to="36,17,0" travel="65" pause="95" act="next"/>
+		<waypoint to="36,16,0" travel="130" pause="30" act="loop"/>
+	</moving>
+
+	<bumper pos="38,16,1" dir="south" bump="80" pause="160" theme="black" active="true"/>
+	<bumper pos="43,15,1" dir="west" bump="80" pause="160" theme="black" active="true"/>
+
+	<moving pos="40,17,0" half="true" active="true" theme="black">
+		<waypoint to="43,17,0" travel="160" pause="80" act="next"/>
+		<waypoint to="40,17,0" travel="160" pause="80" act="loop"/>
+	</moving>
+	<checkpoint pos="44,13,1" respawn="44,13,1"/>
+
+	<!-- side prism -->
+
+	<prism pos="47,9,1"/>
+	<falling pos="45,9,0" float="80" theme="black"/>
+	<falling pos="46,9,0" float="80" theme="black"/>
+	<falling pos="47,10,0" float="80" theme="black"/>
+	<falling pos="47,11,0" float="80" theme="black"/>
+	<falling pos="47,12,0" float="80" theme="black"/>
+	<moving id="R1" pos="42,13,0" half="true" active="false" theme="black">
+		<waypoint to="44,13,0" travel="80" act="halt"/>
+	</moving>
+	<moving id="R2" pos="43,13,0" half="true" active="false" theme="black">
+		<waypoint to="45,13,0" travel="80" act="halt"/>
+	</moving>
+	<moving id="R3" pos="44,13,0" half="true" active="false" theme="black">
+		<waypoint to="46,13,0" travel="80" act="halt"/>
+	</moving>
+	<button pos="47,13,1">
+		<move id="R1" waypoint="0"/>
+		<move id="R2" waypoint="0"/>
+		<move id="R3" waypoint="0"/>
+	</button>
+
+	<!-- move to bumper -->
+
+	<moving pos="44,9,0" half="true" active="true" theme="black">
+		<waypoint to="44,12,0" travel="120" pause="120" act="next"/>
+		<waypoint to="44,9,0" travel="120" pause="120" act="loop"/>
+	</moving>
+	<bumper pos="44,8,1" dir="south" theme="black" active="true" bump="60" pause="180" phase="210" power="3"/>
+
+	<moving id="OE" pos="43,9,0" half="true" active="false" theme="black">
+		<waypoint to="43,9,3" travel="60" act="halt"/>
+	</moving>
+	<button moving="OE">
+		<move id="OE" waypoint="0"/>
+	</button>
+
+	<!-- final maze -->
+	<checkpoint pos="43,9,4" respawn="43,9,4"/>
+	<cameratrigger pos="43,9,4" time="1!" zoom="3"/>
+
+	<bumper id="M1" pos="43,8,4" dir="south" theme="black" active="false" bump="80" pause="80"/>
+	<bumper id="M2" pos="44,16,4" dir="east" theme="black" active="false" bump="80" pause="80"/>
+	<bumper id="M3" pos="41,17,4" dir="north" theme="black" active="false" bump="80" pause="80"/>
+	<bumper id="M4" pos="42,14,4" dir="east" theme="black" active="false" bump="80" pause="80"/>
+	<bumper id="M5" pos="37,15,4" dir="north" theme="black" active="false" bump="80" pause="80"/>
+	<bumper id="M6" pos="36,10,4" dir="west" theme="black" active="false" bump="80" pause="80"/>
+	<bumper id="M7" pos="41,9,4" dir="south" theme="black" active="false" bump="80" pause="80"/>
+
+	<button pos="43,9,4" radius="0,0" stayup="true"><bump id="M1" act="once"/></button>
+	<button pos="43,16,4" radius="0,0" stayup="true"><bump id="M2" act="once"/></button>
+	<button pos="41,16,4" radius="0,0" stayup="true"><bump id="M3" act="once"/></button>
+	<button pos="41,14,4" radius="0,0" stayup="true"><bump id="M4" act="once"/></button>
+	<button pos="37,14,4" radius="0,0" stayup="true"><bump id="M5" act="once"/></button>
+	<button pos="37,10,4" radius="0,0" stayup="true"><bump id="M6" act="once"/></button>
+	<button pos="41,10,4" radius="0,0" stayup="true"><bump id="M7" act="once"/></button>
+
+	<prism pos="39,12,5"/>
+	<prism pos="42,15,5"/>
+	<prism pos="36,17,4"/>
+
+	<moving id="PH" pos="42,15,4" half="false" theme="black" active="false">
+		<waypoint to="41,15,4" travel="40" act="halt"/>
+	</moving>
+	<button moving="PH">
+		<move id="PH" waypoint="0"/>
+	</button>
+
+	<falling pos="35,17,3" float="80" theme="black"/>
+
+	<bumper id="ME" pos="33,17,4" dir="north" theme="black" active="false" bump="40" pause="40"/>
+	<button pos="33,16,4">
+		<bump id="ME" act="enable"/>
+		<bump id="H11" act="enable"/><bump id="H12" act="enable"/><bump id="H13" act="enable"/><bump id="H14" act="enable"/><bump id="H15" act="enable"/>
+		<bump id="H21" act="enable"/><bump id="H22" act="enable"/><bump id="H23" act="enable"/><bump id="H24" act="enable"/><bump id="H25" act="enable"/>
+		<bump id="H31" act="enable"/><bump id="H32" act="enable"/><bump id="H33" act="enable"/><bump id="H34" act="enable"/><bump id="H35" act="enable"/>
+		<bump id="H41" act="enable"/><bump id="H42" act="enable"/><bump id="H43" act="enable"/><bump id="H44" act="enable"/><bump id="H45" act="enable"/>
+	</button>
+</level>

@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<level id="65535" name="world map" time="0,0,0,0" music="notsocubic" theme="white" zoom="2" size="80x80x10" spawn="28,30,40" exit="40,11,7">
+	<!-- level prisms -->
+	<prism pos="28,30,5"/>
+	<prism pos="33,42,5"/>
+	<prism pos="44,30,4"/>
+	<prism pos="64,23,6"/>
+	<prism pos="54,11,7"/>
+
+	<!-- gradients -->
+	<checkpoint pos="33,36,5" respawn="33,36,5" time="1!" theme="blue"/>
+	<checkpoint pos="44,42,4" respawn="44,42,4" time="1!" theme="black"/>
+	<checkpoint pos="48,26,4" respawn="48,26,4" time="1!" theme="white"/>
+	<checkpoint pos="54,21,7" respawn="54,21,7" time="1!" theme="black"/>
+	<checkpoint pos="63,22,6" respawn="63,22,6" time="1!" theme="gray"/>
+	<checkpoint pos="54,15,7" respawn="54,15,7" time="1!" theme="black"/>
+
+	<!-- sync platform -->
+	<moving pos="59,21,6" theme="gray" active="true" half="false">
+		<waypoint to="63,21,6" travel="240" pause="100" act="next"/>
+		<waypoint to="59,21,6" travel="240" pause="100" act="loop"/>
+	</moving>
+
+	<moving id="C0" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="0" act="next"/>
+		<waypoint to="45,42,3" travel="480" act="halt"/>
+	</moving>
+	<moving id="C1" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="50" act="next"/>
+		<waypoint to="44,42,3" travel="440" act="halt"/>
+	</moving>
+	<moving id="C2" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="100" act="next"/>
+		<waypoint to="43,42,3" travel="400" act="halt"/>
+	</moving>
+	<moving id="C3" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="150" act="next"/>
+		<waypoint to="42,42,3" travel="360" act="halt"/>
+	</moving>
+	<moving id="C4" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="200" act="next"/>
+		<waypoint to="41,42,3" travel="320" act="halt"/>
+	</moving>
+	<moving id="C5" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="250" act="next"/>
+		<waypoint to="40,42,3" travel="280" act="halt"/>
+	</moving>
+	<moving id="C6" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="300" act="next"/>
+		<waypoint to="39,42,3" travel="240" act="halt"/>
+	</moving>
+	<moving id="C7" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="350" act="next"/>
+		<waypoint to="38,42,3" travel="200" act="halt"/>
+	</moving>
+	<moving id="C8" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="400" act="next"/>
+		<waypoint to="37,42,3" travel="160" act="halt"/>
+	</moving>
+	<moving id="C9" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="450" act="next"/>
+		<waypoint to="36,42,3" travel="120" act="halt"/>
+	</moving>
+	<moving id="C10" pos="33,42,3" active="false" half="true" theme="blue">
+		<waypoint to="33,42,3" pause="500" act="next"/>
+		<waypoint to="35,42,3" travel="80" act="halt"/>
+	</moving>
+
+	<button pos="34,42,5">
+		<move id="C0" waypoint="0"/>
+		<move id="C1" waypoint="0"/>
+		<move id="C2" waypoint="0"/>
+		<move id="C3" waypoint="0"/>
+		<move id="C4" waypoint="0"/>
+		<move id="C5" waypoint="0"/>
+		<move id="C6" waypoint="0"/>
+		<move id="C7" waypoint="0"/>
+		<move id="C8" waypoint="0"/>
+		<move id="C9" waypoint="0"/>
+		<move id="C10" waypoint="0"/>
+	</button>
+
+	<bumper pos="43,26,4" dir="west" theme="gray" active="false" bump="40" pause="40" id="bump"/>
+	<button pos="44,26,4" stayup="true">
+		<bump id="bump" act="enable"/>
+	</button>
+
+	<shrink pos="54,26,4" visible="true"/>
+
+	<grow pos="54,23,7" visible="true"/>
+
+	<moving id="G1" pos="53,20,7" theme="black" active="false" half="false">
+		<waypoint to="53,19,7" travel="60" pause="30" act="next"/>
+		<waypoint to="52,19,7" travel="60" pause="30" act="halt"/>
+	</moving>
+	<moving id="G2" pos="54,20,7" theme="black" active="false" half="false">
+		<waypoint to="54,18,7" travel="60" pause="30" act="next"/>
+		<waypoint to="54,18,8" travel="60" pause="30" act="next"/>
+		<waypoint to="56,18,8" travel="60" pause="30" act="halt"/>
+	</moving>
+	<moving id="G3" pos="55,20,7" theme="black" active="false" half="false">
+		<waypoint to="55,19,7" travel="60" pause="30" act="next"/>
+		<waypoint to="56,19,7" travel="60" pause="30" act="halt"/>
+	</moving>
+	<moving id="G4" pos="53,20,8" theme="black" active="false" half="false">
+		<waypoint to="53,19,8" travel="60" pause="30" act="next"/>
+		<waypoint to="52,19,8" travel="60" pause="30" act="halt"/>
+	</moving>
+	<moving id="G5" pos="54,20,8" theme="black" active="false" half="false">
+		<waypoint to="54,18,8" travel="60" pause="30" act="next"/>
+		<waypoint to="52,18,8" travel="60" pause="30" act="halt"/>
+	</moving>
+	<moving id="G6" pos="55,20,8" theme="black" active="false" half="false">
+		<waypoint to="55,19,8" travel="60" pause="30" act="next"/>
+		<waypoint to="56,19,8" travel="60" pause="30" act="halt"/>
+	</moving>
+
+	<button pos="66,25,6">
+		<move id="G1" waypoint="0"/>
+		<move id="G2" waypoint="0"/>
+		<move id="G3" waypoint="0"/>
+		<move id="G4" waypoint="0"/>
+		<move id="G5" waypoint="0"/>
+		<move id="G6" waypoint="0"/>
+	</button>
+</level>

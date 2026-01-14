@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<world>
+	<route pos="28,30,5" mini="false" theme="white" file="first_contact">
+		<effects></effects>
+		<path>
+			<event type="southdown" time="0"/>
+			<event type="southup" time="457"/>
+			<event type="westdown" time="82"/>
+			<event type="westup" time="385"/>
+			<event type="southdown" time="61"/>
+			<event type="southup" time="449"/>
+		</path>
+	</route>
+	<route pos="33,42,5" mini="false" theme="blue" file="click">
+		<effects>
+			<press id="0"/>
+		</effects>
+		<path>
+			<event type="westdown" time="0"/>
+			<event type="westup" time="89"/>
+			<event type="westdown" time="486"/>
+			<event type="westup" time="787"/>
+			<event type="northdown" time="36"/>
+			<event type="northup" time="884"/>
+		</path>
+	</route>
+	<route pos="44,30,4" mini="false" theme="black" file="bump">
+		<effects>
+			<press id="1"/>
+		</effects>
+		<path>
+			<event type="northdown" time="0"/>
+			<event type="northup" time="291"/>
+			<event type="westdown" time="134"/>
+			<event type="westup" time="422"/>
+		</path>
+	</route>
+	<route pos="54,26,4" mini="true" theme="white" file="chunk">
+		<effects></effects>
+		<path>
+			<event type="northdown" time="0"/>
+			<event type="northup" time="658"/>
+			<event type="northdown" time="192"/>
+			<event type="northup" time="65"/>
+			<event type="westdown" time="56"/>
+			<event type="westup" time="424"/>
+			<event type="sync" id="0" waypoint="1"/>
+			<event type="northdown" time="0"/>
+			<event type="northup" time="63"/>
+			<event type="northdown" time="56"/>
+			<event type="northup" time="48"/>
+			<event type="northdown" time="56"/>
+			<event type="northup" time="40"/>
+			<event type="southdown" time="153"/>
+			<event type="southup" time="84"/>
+			<event type="westdown" time="40"/>
+			<event type="westup" time="76"/>
+		</path>
+	</route>
+	<route pos="64,23,6" mini="false" theme="gray" file="edgetime">
+		<effects>
+			<press id="2"/>
+		</effects>
+		<path>
+			<event type="southdown" time="0"/>
+			<event type="southup" time="81"/>
+			<event type="westdown" time="28"/>
+			<event type="westup" time="155"/>
+			<event type="southdown" time="61"/>
+			<event type="southup" time="85"/>
+			<event type="eastdown" time="36"/>
+			<event type="eastup" time="77"/>
+			<event type="northdown" time="44"/>
+			<event type="northup" time="210"/>
+			<event type="eastdown" time="32"/>
+			<event type="eastup" time="181"/>
+			<event type="sync" id="0" waypoint="0"/>
+			<event type="northdown" time="0"/>
+			<event type="northup" time="69"/>
+			<event type="northdown" time="52"/>
+			<event type="northup" time="52"/>
+			<event type="northdown" time="51"/>
+			<event type="northup" time="32"/>
+			<event type="eastdown" time="76"/>
+			<event type="eastup" time="503"/>
+			<event type="northdown" time="8"/>
+			<event type="northup" time="811"/>
+		</path>
+	</route>
+	<route pos="54,11,7" mini="false" theme="black" file="arksector">
+		<effects></effects>
+		<path>
+			<event type="eastdown" time="0"/>
+			<event type="eastup" time="1021"/>
+		</path>
+	</route>
+	<darkprism id="3"/>
+</world>

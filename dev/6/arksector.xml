@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<level id="106" name="arksector" time="150,180,222,278" music="squadron" theme="black" zoom="2" size="160x87x4" spawn="53,53,4" exit="153,1,3">
+	<!-- spawn island -->
+	<prism pos="53,53,1"/>
+	<checkpoint pos="51,50,1" respawn="2,2,4" reset="true"/>
+
+	<!-- branching island -->
+	<moving id="BI_mp" pos="4,2,0" half="true" theme="black" active="false">
+		<waypoint to="25,2,0" travel="1!" act="halt"/>
+		<waypoint to="4,2,0" travel="1!" act="halt"/>
+	</moving>
+	<button id="BI_btn1" moving="BI_mp">
+		<move id="BI_mp" waypoint="0"/>
+	</button>
+	<button pos="25,2,1" id="BI_btn2" pressed="true" radius="0,0">
+		<move id="BI_mp" waypoint="1"/>
+	</button>
+	<button pos="28,2,1" radius="0,0">
+		<click id="BI_btn1" pressed="false"/>
+		<click id="BI_btn2" pressed="false"/>
+		<move id="BI_lock1" waypoint="0"/>
+		<move id="BI_lock2" waypoint="0"/>
+		<move id="BI_lock3" waypoint="0"/>
+		<move id="BI_lock4" waypoint="0"/>
+		<move id="BI_lock5" waypoint="0"/>
+		<move id="BI_lock6" waypoint="0"/>
+	</button>
+
+	<prism pos="28,2,1"/>
+
+	<moving id="BI_lock1" pos="2,0,0" half="true" theme="black" active="false">
+		<waypoint to="2,0,1024" act="halt"/>
+	</moving>
+	<moving id="BI_lock2" follow="BI_lock1" offset="0,0,1" half="false" theme="black" active="false"/>
+	<moving id="BI_lock3" follow="BI_lock1" offset="0,0,2" half="false" theme="black" active="false"/>
+	<moving id="BI_lock4" follow="BI_lock1" offset="0,4,0" half="true" theme="black" active="false"/>
+	<moving id="BI_lock5" follow="BI_lock1" offset="0,4,1" half="false" theme="black" active="false"/>
+	<moving id="BI_lock6" follow="BI_lock1" offset="0,4,2" half="false" theme="black" active="false"/>
+
+	<!-- island C -->
+	<checkpoint pos="2,4,1" respawn="2,27,4" reset="true"/>
+
+	<falling pos="4,27,0" float="120" theme="white"/>
+	<falling pos="5,27,0" float="120" theme="white"/>
+	<falling pos="6,27,0" float="120" theme="white"/>
+	<falling pos="7,27,0" float="120" theme="white"/>
+	<falling pos="8,27,0" float="120" theme="white"/>
+	<falling pos="9,27,0" float="120" theme="white"/>
+
+	<falling pos="4,53,0" float="120" theme="white"/>
+	<falling pos="5,53,0" float="120" theme="white"/>
+	<falling pos="6,53,0" float="120" theme="white"/>
+	<falling pos="7,53,0" float="120" theme="white"/>
+	<falling pos="8,53,0" float="120" theme="white"/>
+	<falling pos="9,53,0" float="120" theme="white"/>
+
+	<button pos="27,27,1" pressed="true"/>
+
+	<prism pos="27,27,2"/>
+	<teleporter pos="27,27,1" target="27,53,1"/>
+	<moving id="C_mp" pos="27,53,0" half="false" active="false" theme="black">
+		<waypoint to="27,53,0" pause="120" act="next"/>
+		<waypoint to="27,53,1" travel="1!" act="halt"/>
+	</moving>
+	<button moving="C_mp">
+		<move id="C_mp" waypoint="0"/>
+	</button>
+
+	<prism pos="2,53,1"/>
+	<falling pos="2,48,0" float="120" theme="white"/>
+	<falling pos="2,49,0" float="120" theme="white"/>
+	<falling pos="2,50,0" float="120" theme="white"/>
+	<checkpoint pos="2,46,1" respawn="2,2,4" reset="true"/>
+	<button pos="2,47,1" radius="0,0">
+		<move id="T_mp2" waypoint="0"/>
+	</button>
+
+	<bumper id="C_bump" pos="25,53,1" dir="east" bump="40" pause="40" theme="black" active="false"/>
+	<button pos="24,53,1" radius="0,0" stayup="true">
+		<bump id="C_bump" act="once"/>
+	</button>
+
+	<!-- island B -->
+	<checkpoint pos="2,0,1" respawn="40,76,4" reset="true"/>
+	<moving id="B_mp" pos="28,76,0" half="true" active="false" theme="black">
+		<waypoint to="28,76,-1" travel="120" pause="60" act="halt"/>
+		<waypoint to="31,76,-1" travel="60" pause="30" act="next"/>
+		<waypoint to="31,76,0" travel="60" pause="30" act="halt"/>
+	</moving>
+	<button pos="38,76,4">
+		<move id="B_mp" waypoint="0"/>
+		<move id="BL1" waypoint="0"/>
+		<move id="BL2" waypoint="0"/>
+		<move id="BL3" waypoint="0"/>
+	</button>
+	<button pos="28,76,0">
+		<move id="B_mp" waypoint="1"/>
+	</button>
+	<button pos="40,76,1" radius="0,0">
+		<move id="T_mp1" waypoint="0"/>
+	</button>
+	<checkpoint pos="28,76,0" respawn="2,2,4" reset="true"/>
+
+	<prism pos="38,76,4"/>
+	<prism pos="49,76,1"/>
+
+	<teleporter pos="67,78,1" target="19,78,1"/>
+	<teleporter pos="67,79,1" target="19,79,1"/>
+	<teleporter pos="67,80,1" target="19,80,1"/>
+
+	<teleporter pos="17,78,1" target="65,78,1"/>
+	<teleporter pos="17,79,1" target="65,79,1"/>
+	<teleporter pos="17,80,1" target="65,80,1"/>
+
+	<moving id="BL1" pos="28,76,-1" theme="black" half="false" active="false">
+		<waypoint to="28,76,2" travel="30" act="next"/>
+		<waypoint to="32,76,2" travel="40" act="next"/>
+		<waypoint to="32,80,2" travel="40" act="halt"/>
+	</moving>
+	<moving id="BL2" pos="28,76,-1" theme="black" half="false" active="false">
+		<waypoint to="28,76,-1" pause="10" act="next"/>
+		<waypoint to="28,76,2" travel="30" act="next"/>
+		<waypoint to="32,76,2" travel="40" act="next"/>
+		<waypoint to="32,79,2" travel="30" act="halt"/>
+	</moving>
+	<moving id="BL3" pos="28,76,-1" theme="black" half="false" active="false">
+		<waypoint to="28,76,-1" pause="20" act="next"/>
+		<waypoint to="28,76,2" travel="30" act="next"/>
+		<waypoint to="32,76,2" travel="40" act="next"/>
+		<waypoint to="32,78,2" travel="20" act="halt"/>
+	</moving>
+
+	<!-- transition to tunnels -->
+	<moving id="T_mp0" pos="0,2,0" half="true" active="false" theme="black">
+		<waypoint to="-32,2,0" travel="320" act="halt"/>
+	</moving>
+	<moving id="T_mp3" follow="T_mp0" offset="84,40,0" half="true" active="false" theme="black"/>
+
+	<moving id="T_mp1" pos="2,0,1024" half="true" active="false" theme="black">
+		<waypoint to="2,0,0" act="halt"/>
+	</moving>
+	<moving id="T_mp2" pos="2,4,1024" half="true" active="false" theme="black">
+		<waypoint to="2,4,0" act="halt"/>
+	</moving>
+
+	<button id="T_btn0" moving="T_mp0" pressed="true">
+		<move id="T_mp0" waypoint="0"/>
+		<move id="T_mp3" waypoint="0"/>
+	</button>
+	<button id="T_btn1" moving="T_mp1">
+		<click id="T_btn2" pressed="false"/>
+	</button>
+	<button id="T_btn2" moving="T_mp2" pressed="true">
+		<click id="T_btn0" pressed="false"/>
+	</button>
+
+	<moving pos="-21,2,1" half="false" active="false" theme="black"/>
+	<moving pos="-21,2,2" half="false" active="false" theme="black"/>
+
+	<teleporter pos="-20,2,0" target="64,42,0"/>
+	<button pos="-20,2,0" radius="0,0">
+		<move id="TH" waypoint="0"/>
+	</button>
+
+	<moving pos="63,42,1" half="false" active="false" theme="black"/>
+	<moving pos="63,42,2" half="false" active="false" theme="black"/>
+
+	<moving pos="-20,2,-1" active="false" theme="black" half="true"/>
+
+	<moving id="TH" pos="64,42,-1" active="false" theme="black" half="true">
+		<waypoint to="64,42,-1" pause="120" act="next"/>
+		<waypoint to="64,42,0" travel="40" pause="1!" act="next"/>
+		<waypoint to="64,31,0" travel="120" pause="20" act="next"/>
+		<waypoint to="52,31,0" travel="120" pause="20" act="next"/>
+		<waypoint to="52,29,0" travel="120" pause="20" act="halt"/>
+	</moving>
+	<button moving="TH">
+		<move id="TH" waypoint="1"/>
+		<move id="F1" waypoint="0"/>
+		<move id="F2" waypoint="0"/>
+		<move id="F3" waypoint="0"/>
+		<move id="F4" waypoint="0"/>
+		<move id="F5" waypoint="0"/>
+		<move id="F6" waypoint="0"/>
+		<move id="F7" waypoint="0"/>
+		<move id="F8" waypoint="0"/>
+		<move id="F9" waypoint="0"/>
+		<move id="F10" waypoint="0"/>
+		<move id="F11" waypoint="0"/>
+	</button>
+
+	<!-- looping fall -->
+	<falling pos="45,27,0" float="120" theme="white"/>
+	<falling pos="45,28,0" float="120" theme="white"/>
+	<falling pos="46,28,0" float="120" theme="white"/>
+	<falling pos="47,28,0" float="120" theme="white"/>
+	<falling pos="48,28,0" float="120" theme="white"/>
+
+	<moving id="LF" pos="45,25,1" half="true" theme="black" active="false">
+		<waypoint to="45,25,0" travel="60" pause="20" act="next"/>
+		<waypoint to="49,25,0" travel="60" pause="20" act="next"/>
+		<waypoint to="49,28,0" travel="60" pause="20" act="halt"/>
+	</moving>
+
+	<moving id="TU" pos="53,25,1" theme="black" active="false" half="true">
+		<waypoint to="53,25,1025" act="halt"/>
+	</moving>
+
+	<prism pos="53,25,2"/>
+
+	<!-- tunnels -->
+	<teleporter pos="53,15,1" target="104,18,1"/>
+
+	<moving id="F1" pos="55,0,0" theme="black" active="false" half="true">
+		<waypoint to="55,28,0" travel="4!" act="halt"/>
+		<waypoint to="55,-28,0" travel="8!" act="halt"/>
+	</moving>
+	<moving id="F2" follow="F1" offset="1,0,0" theme="black" active="false" half="true"/>
+	<moving id="F3" follow="F1" offset="2,0,0" theme="black" active="false" half="true"/>
+	<moving id="F4" follow="F1" offset="3,0,0" theme="black" active="false" half="true"/>
+	<moving id="F5" follow="F1" offset="4,0,0" theme="black" active="false" half="true"/>
+	<moving id="F6" follow="F1" offset="5,0,0" theme="black" active="false" half="true"/>
+	<moving id="F7" follow="F1" offset="6,0,0" theme="black" active="false" half="true"/>
+	<moving id="F8" follow="F1" offset="7,0,0" theme="black" active="false" half="true"/>
+	<moving id="F9" follow="F1" offset="8,0,0" theme="black" active="false" half="true"/>
+	<moving id="F10" follow="F1" offset="9,0,0" theme="black" active="false" half="true"/>
+	<moving id="F11" follow="F1" offset="10,0,0" theme="black" active="false" half="true"/>
+
+	<button pos="66,28,1" radius="0,0">
+		<move id="F1" waypoint="1"/>
+		<move id="F2" waypoint="1"/>
+		<move id="F3" waypoint="1"/>
+		<move id="F4" waypoint="1"/>
+		<move id="F5" waypoint="1"/>
+		<move id="F6" waypoint="1"/>
+		<move id="F7" waypoint="1"/>
+		<move id="F8" waypoint="1"/>
+		<move id="F9" waypoint="1"/>
+		<move id="F10" waypoint="1"/>
+		<move id="F11" waypoint="1"/>
+	</button>
+
+	<prism pos="45,28,1"/>
+
+	<falling pos="67,28,0" float="120" theme="white"/>
+	<falling pos="68,28,0" float="120" theme="white"/>
+	<falling pos="69,28,0" float="120" theme="white"/>
+
+	<falling pos="67,24,1" float="120" theme="white"/>
+	<falling pos="68,24,1" float="120" theme="white"/>
+	<falling pos="69,24,1" float="120" theme="white"/>
+
+	<falling pos="67,20,2" float="120" theme="white"/>
+	<falling pos="68,20,2" float="120" theme="white"/>
+	<falling pos="69,20,2" float="120" theme="white"/>
+
+	<falling pos="67,16,3" float="120" theme="white"/>
+	<falling pos="68,16,3" float="120" theme="white"/>
+	<falling pos="69,16,3" float="120" theme="white"/>
+
+	<falling pos="70,25,0" float="120" theme="white"/>
+	<falling pos="70,26,0" float="120" theme="white"/>
+	<falling pos="70,27,0" float="120" theme="white"/>
+
+	<falling pos="66,21,1" float="120" theme="white"/>
+	<falling pos="66,22,1" float="120" theme="white"/>
+	<falling pos="66,23,1" float="120" theme="white"/>
+
+	<falling pos="70,17,2" float="120" theme="white"/>
+	<falling pos="70,18,2" float="120" theme="white"/>
+	<falling pos="70,19,2" float="120" theme="white"/>
+
+	<falling pos="66,13,0" float="120" theme="white"/>
+	<falling pos="66,14,0" float="120" theme="white"/>
+	<falling pos="66,15,0" float="120" theme="white"/>
+
+	<falling pos="67,12,0" float="120" theme="white"/>
+	<falling pos="68,12,0" float="120" theme="white"/>
+	<falling pos="69,12,0" float="120" theme="white"/>
+	<falling pos="70,12,0" float="120" theme="white"/>
+	<falling pos="71,12,0" float="120" theme="white"/>
+	<falling pos="72,12,0" float="120" theme="white"/>
+	<falling pos="73,12,0" float="120" theme="white"/>
+	<falling pos="74,12,0" float="120" theme="white"/>
+	<falling pos="75,12,0" float="120" theme="white"/>
+	<falling pos="76,12,0" float="120" theme="white"/>
+	<falling pos="77,12,0" float="120" theme="white"/>
+
+	<falling pos="79,12,0" float="120" theme="white"/>
+	<falling pos="80,12,0" float="120" theme="white"/>
+	<falling pos="81,12,0" float="120" theme="white"/>
+	<falling pos="82,12,0" float="120" theme="white"/>
+	<falling pos="83,12,0" float="120" theme="white"/>
+	<falling pos="84,12,0" float="120" theme="white"/>
+	<falling pos="85,12,0" float="120" theme="white"/>
+	<falling pos="86,12,0" float="120" theme="white"/>
+	<falling pos="87,12,0" float="120" theme="white"/>
+	<falling pos="88,12,0" float="120" theme="white"/>
+	<falling pos="89,12,0" float="120" theme="white"/>
+
+	<falling pos="91,12,0" float="120" theme="white"/>
+	<falling pos="92,12,0" float="120" theme="white"/>
+	<falling pos="93,12,0" float="120" theme="white"/>
+	<falling pos="94,12,0" float="120" theme="white"/>
+	<falling pos="95,12,0" float="120" theme="white"/>
+	<falling pos="96,12,0" float="120" theme="white"/>
+	<falling pos="97,12,0" float="120" theme="white"/>
+	<falling pos="98,12,0" float="120" theme="white"/>
+	<falling pos="99,12,0" float="120" theme="white"/>
+	<falling pos="100,12,0" float="120" theme="white"/>
+	<falling pos="101,12,0" float="120" theme="white"/>
+
+	<falling pos="112,4,0" float="120" theme="white"/>
+	<falling pos="112,5,0" float="120" theme="white"/>
+	<falling pos="112,6,0" float="120" theme="white"/>
+	<falling pos="112,7,0" float="120" theme="white"/>
+	<falling pos="112,8,0" float="120" theme="white"/>
+
+	<falling pos="120,4,0" float="120" theme="white"/>
+	<falling pos="120,5,0" float="120" theme="white"/>
+	<falling pos="120,6,0" float="120" theme="white"/>
+	<falling pos="120,7,0" float="120" theme="white"/>
+	<falling pos="120,8,0" float="120" theme="white"/>
+
+	<bumper pos="65,12,1" dir="west" theme="black" bump="80" pause="80" active="false" id="FPB"/>
+	<button pos="66,12,1" radius="0,0" stayup="true">
+		<bump id="FPB" act="enable"/>
+	</button>
+
+	<prism pos="78,12,1"/>
+	<shrink pos="66,28,1" visible="true"/>
+	<grow pos="90,12,1" visible="true"/>
+	<prism pos="70,28,1"/>
+	<checkpoint pos="66,28,1" respawn="66,28,1"/>
+
+	<button pos="78,12,1">
+		<move id="TU" waypoint="0"/>
+	</button>
+
+	<teleporter pos="102,20,1" target="51,13,1"/>
+
+	<teleporter pos="53,15,1" target="104,18,1"/>
+	<teleporter pos="104,19,1" target="53,16,1"/>
+	<button pos="104,10,1" radius="0,0">
+		<move id="LF" waypoint="0"/>
+	</button>
+
+	<prism pos="104,2,1"/>
+
+	<moving id="Q" pos="106,2,0" half="true" active="true" theme="black">
+		<waypoint to="110,2,0" travel="1!" pause="60" act="next"/>
+		<waypoint to="106,2,0" travel="1!" pause="60" act="loop"/>
+	</moving>
+	<moving follow="Q" offset="8,8,0" half="true" active="true" theme="black"/>
+	<moving follow="Q" offset="16,0,0" half="true" active="true" theme="black"/>
+
+	<prism pos="128,2,1"/>
+
+	<checkpoint pos="104,2,1" radius="1,1" respawn="104,2,1"/>
+
+	<teleporter pos="130,23,1" target="53,16,1"/>
+	<teleporter pos="53,15,1" target="130,22,1"/>
+
+	<falling pos="130,2,0" float="120" theme="white"/>
+	<falling pos="130,3,0" float="120" theme="white"/>
+	<falling pos="130,4,0" float="120" theme="white"/>
+	<falling pos="130,5,0" float="120" theme="white"/>
+	<falling pos="130,6,0" float="120" theme="white"/>
+	<falling pos="130,7,0" float="120" theme="white"/>
+
+	<!-- infinite path -->
+	<checkpoint pos="45,25,2" respawn="127,52,4" reset="true"/>
+
+	<prism pos="134,52,1"/>
+
+	<teleporter pos="144,60,1" target="98,68,1"/>
+	<teleporter pos="143,61,1" target="99,67,1"/>
+	<teleporter pos="142,62,1" target="100,66,1"/>
+
+	<teleporter pos="112,78,1" target="98,68,1"/>
+	<teleporter pos="111,79,1" target="99,67,1"/>
+	<teleporter pos="110,80,1" target="100,66,1"/>
+
+	<prism pos="84,52,1"/>
+	<checkpoint pos="75,51,1" respawn="151,4,5" reset="true"/>
+
+	<!-- final part -->
+	<moving id="S1" pos="157,3,0" half="true" active="false" theme="black">
+		<waypoint to="157,2,0" travel="120" act="halt"/>
+	</moving>
+	<moving id="S2" follow="S1" offset="0,1,0" half="true" active="false" theme="black"/>
+	<moving id="S3" follow="S1" offset="0,2,0" half="true" active="false" theme="black"/>
+	<moving id="T" pos="157,1,-1" half="true" active="false" theme="black">
+		<waypoint to="157,5,0" pause="40" act="next"/>
+		<waypoint to="157,6,0" travel="40" pause="20" act="next"/>
+		<waypoint to="149,6,0" travel="80" pause="20" act="next"/>
+		<waypoint to="149,29,0" travel="80" pause="20" act="halt"/>
+	</moving>
+
+	<button pos="157,1,2">
+		<move id="S1" waypoint="0"/>
+		<move id="S2" waypoint="0"/>
+		<move id="S3" waypoint="0"/>
+		<click id="U" pressed="false"/>
+	</button>
+	<button id="U" pos="157,5,1" pressed="true" radius="0,0">
+		<move id="T" waypoint="0"/>
+	</button>
+
+	<prism pos="157,26,2"/>
+	<checkpoint pos="150,26,4" respawn="150,1,8" reset="true"/>
+	<prism pos="156,1,4"/>
+
+	<bumper pos="155,26,2" dir="west" bump="80" pause="80" theme="black" id="FB" active="false"/>
+	<button pos="156,26,2" radius="0,0" stayup="true">
+		<bump id="FB" act="once"/>
+	</button>
+</level>

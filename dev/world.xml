@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<level id="65535" name="sample level" time="0,0,0,0" size="11x11x2" spawn="5,5,30" exit="1,1,1" zoom="2" theme="white" music="notsocubic">
+	<!-- prisms -->
+	<prism pos="5,5,1"/>
+	<prism pos="5,1,1"/>
+	<prism pos="9,5,1"/>
+	<prism pos="5,9,1"/>
+	<prism pos="1,5,1"/>
+
+	<!-- moving platforms -->
+	<moving id="FC" pos="5,1,-1" half="true" theme="white" active="false">
+		<waypoint to="7,1,-1" travel="10" pause="10" act="next"/>
+		<waypoint to="7,1,0" travel="10" pause="10" act="halt"/>
+	</moving>
+	<button pos="6,1,1">
+		<move id="FC" waypoint="0"/>
+	</button>
+</level>

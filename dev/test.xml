@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<level id="2" name="Test Map" time="10,12,15,22" size="13x13x4" spawn="7,7,4" exit="10,10,1" zoom="2" theme="White" music="kakkoi">
+	<!-- moving platforms -->
+	<moving id="R" pos="5,5,1" half="false" theme="black" active="true">
+		<waypoint to="9,5,1" travel="384" pause="384" act="next"/>
+		<waypoint to="5,5,1" travel="384" pause="384" act="loop"/>
+	</moving>
+	<moving id="M1" pos="6,7,1" half="false" theme="black" active="false">
+		<waypoint to="6,16,1" travel="384" pause="384" act="halt"/>
+	</moving>
+	<moving id="M2" pos="6,6,2" half="false" theme="black" active="false">
+		<waypoint to="6,15,2" travel="384" pause="384" act="halt"/>
+	</moving>
+
+	<moving id="C1" pos="3,2,1" half="false" theme="gray" active="true">
+		<waypoint to="4,1,1" travel="192" pause="64" act="next"/>
+		<waypoint to="4,4,1" travel="192" pause="64" act="next"/>
+		<waypoint to="1,4,1" travel="192" pause="64" act="next"/>
+		<waypoint to="1,1,1" travel="192" pause="64" act="loop"/>
+	</moving>
+	<moving id="C2" pos="3,3,1" half="false" theme="gray" active="true">
+		<waypoint to="4,4,1" travel="192" pause="64" act="next"/>
+		<waypoint to="1,4,1" travel="192" pause="64" act="next"/>
+		<waypoint to="1,1,1" travel="192" pause="64" act="next"/>
+		<waypoint to="4,1,1" travel="192" pause="64" act="loop"/>
+	</moving>
+	<moving id="C3" pos="2,3,1" half="false" theme="gray" active="true">
+		<waypoint to="1,4,1" travel="192" pause="64" act="next"/>
+		<waypoint to="1,1,1" travel="192" pause="64" act="next"/>
+		<waypoint to="4,1,1" travel="192" pause="64" act="next"/>
+		<waypoint to="4,4,1" travel="192" pause="64" act="loop"/>
+	</moving>
+	<moving id="C4" pos="2,2,1" half="false" theme="gray" active="true">
+		<waypoint to="1,1,1" travel="192" pause="64" act="next"/>
+		<waypoint to="4,1,1" travel="192" pause="64" act="next"/>
+		<waypoint to="4,4,1" travel="192" pause="64" act="next"/>
+		<waypoint to="1,4,1" travel="192" pause="64" act="loop"/>
+	</moving>
+
+	<!-- falling platforms -->
+	<falling pos="7,7,0" float="128" theme="blue"/>
+	<falling pos="8,7,0" float="128" theme="blue"/>
+	<falling pos="9,7,0" float="128" theme="blue"/>
+	<falling pos="7,8,0" float="128" theme="blue"/>
+	<falling pos="7,9,0" float="128" theme="blue"/>
+
+	<!-- bumpers -->
+	<bumper id="B1" pos="0,9,1" bump="80" pause="341" dir="west" active="false" theme="white"/>
+	<bumper id="B2" pos="0,9,1" bump="80" pause="341" dir="south" active="false" theme="white"/>
+
+	<!-- resizers -->
+	<shrink pos="6,8,1" visible="true"/>
+	<grow pos="8,6,1" visible="true"/>
+	<grow pos="10,10,1" radius="1,1" visible="false"/>
+
+	<!-- prisms -->
+	<prism pos="11,0,1"/>
+	<prism pos="11,1,1"/>
+	<prism pos="12,0,1"/>
+	<prism pos="12,1,1"/>
+
+	<!-- checkpoints -->
+	<checkpoint pos="1,1,1" radius="1,1" respawn="1,1,4" theme="gray" time="1!"/>
+
+	<!-- buttons -->
+	<button pos="6,11,1" radius="0,0" pressed="false" stayup="false" lock="0">
+		<move id="M1" waypoint="0"/>
+		<move id="M2" waypoint="0"/>
+		<button id="BB" pressed="false"/>
+	</button>
+	<button id="BB" pos="1,9,1" pressed="true" stayup="false" lock="none">
+		<bump id="B1" act="once"/>
+		<bump id="B2" act="once"/>
+	</button>
+	<button moving="1" pressed="false" stayup="false">
+		<bump id="B1" act="enable"/>
+		<bump id="B2" act="enable"/>
+	</button>
+
+	<!-- camera triggers -->
+	<cameratrigger pos="6,1,1" time="180" zoom="1"/>
+	<cameratrigger pos="7,1,1" time="180" zoom="2"/>
+	<cameratrigger pos="8,1,1" time="180" zoom="3"/>
+	<cameratrigger pos="6,2,1" time="180" fov="22"/>
+	<cameratrigger pos="7,2,1" time="180" fov="50"/>
+	<cameratrigger pos="8,2,1" time="180" fov="90"/>
+
+	<!-- camera locks -->
+	<cameralock eye="1,9,1"/>
+
+	<!-- teleporters -->
+	<teleporter pos="8,3,2" target="9,9,1"/>
+
+	<!-- dark cubes -->
+	<darkcube pos="7,7,1" spawn="6,6,30">
+		<event type="westdown" time="4!0"/>
+		<event type="westup" time="316"/>
+		<event type="sync" id="R" waypoint="0"/>
+		<event type="northdown" time="0"/>
+		<event type="northup" time="56"/>
+		<event type="northdown" time="48"/>
+		<event type="northup" time="32"/>
+		<event type="northdown" time="32"/>
+		<event type="northup" time="28"/>
+		<event type="northdown" time="32"/>
+		<event type="northup" time="36"/>
+		<event type="northdown" time="44"/>
+		<event type="northup" time="124"/>
+		<event type="eastdown" time="196"/>
+		<event type="eastup" time="364"/>
+		<event type="southdown" time="16"/>
+		<event type="southup" time="228"/>
+		<event type="eastdown" time="28"/>
+		<event type="eastup" time="92"/>
+		<event type="southdown" time="28"/>
+		<event type="southup" time="56"/>
+		<event type="southdown" time="48"/>
+		<event type="southup" time="28"/>
+		<event type="southdown" time="32"/>
+		<event type="southup" time="32"/>
+		<event type="southdown" time="28"/>
+		<event type="southup" time="124"/>
+		<event type="westdown" time="28"/>
+		<event type="westup" time="124"/>
+		<event type="southdown" time="232"/>
+		<event type="southup" time="164"/>
+		<event type="eastdown" time="24"/>
+		<event type="eastup" time="212"/>
+		<event type="northdown" time="20"/>
+		<event type="northup" time="92"/>
+		<event type="southdown" time="44"/>
+		<event type="southup" time="84"/>
+		<event type="westdown" time="12"/>
+		<event type="westup" time="376"/>
+		<event type="eastdown" time="20"/>
+		<event type="eastup" time="360"/>
+		<event type="northdown" time="20"/>
+		<event type="northup" time="168"/>
+		<event type="northdown" time="128"/>
+		<event type="northup" time="312"/>
+		<event type="sync" id="C1" waypoint="0"/>
+		<event type="northdown" time="0"/>
+		<event type="northup" time="56"/>
+		<event type="northdown" time="48"/>
+		<event type="northup" time="36"/>
+		<event type="northdown" time="24"/>
+		<event type="northup" time="20"/>
+		<event type="northdown" time="28"/>
+		<event type="northup" time="28"/>
+		<event type="northdown" time="32"/>
+		<event type="northup" time="136"/>
+		<event type="westdown" time="240"/>
+		<event type="westup" time="360"/>
+		<event type="southdown" time="160"/>
+		<event type="southup" time="124"/>
+		<event type="southdown" time="52"/>
+		<event type="southup" time="32"/>
+		<event type="southdown" time="32"/>
+		<event type="southup" time="24"/>
+		<event type="southdown" time="28"/>
+		<event type="southup" time="132"/>
+		<event type="westdown" time="196"/>
+		<event type="westup" time="152"/>
+		<event type="southdown" time="24"/>
+		<event type="southup" time="160"/>
+		<event type="eastdown" time="28"/>
+		<event type="eastup" time="152"/>
+		<event type="northdown" time="28"/>
+		<event type="northup" time="84"/>
+		<event type="westdown" time="28"/>
+		<event type="westup" time="88"/>
+	</darkcube>
+</level>

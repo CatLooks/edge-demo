@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<level id="105" name="chunk" time="90,108,140,183" music="lol" theme="white" zoom="2" size="27x30x17" spawn="16,25,8" exit="13,28,1">
+	<prism pos="16,25,1"/>
+	<grow pos="13,28,1" radius="1,1" visible="false"/>
+
+	<moving pos="4,16,13" half="false" theme="white" active="false"/>
+	<moving pos="5,16,13" half="false" theme="white" active="false"/>
+	<moving pos="6,16,13" half="false" theme="white" active="false"/>
+	<moving pos="7,16,13" half="false" theme="white" active="false"/>
+	<moving pos="8,16,13" half="false" theme="white" active="false"/>
+	<moving pos="9,16,13" half="false" theme="white" active="false"/>
+	<moving pos="10,16,13" half="false" theme="white" active="false"/>
+
+	<!-- intro platforms -->
+	<moving pos="36,18,0" half="true" theme="white" active="true">
+		<waypoint to="36,18,0" pause="150" act="next"/>
+		<waypoint to="16,18,0" travel="5!" act="halt"/>
+	</moving>
+	<moving pos="36,19,0" half="true" theme="white" active="true">
+		<waypoint to="36,19,0" pause="120" act="next"/>
+		<waypoint to="16,19,0" travel="5!" act="halt"/>
+	</moving>
+	<moving pos="36,20,0" half="true" theme="white" active="true">
+		<waypoint to="36,20,0" pause="90" act="next"/>
+		<waypoint to="16,20,0" travel="5!" act="halt"/>
+	</moving>
+	<moving pos="36,21,0" half="true" theme="white" active="true">
+		<waypoint to="36,21,0" pause="60" act="next"/>
+		<waypoint to="16,21,0" travel="5!" act="halt"/>
+	</moving>
+	<moving pos="36,22,0" half="true" theme="white" active="true">
+		<waypoint to="36,22,0" pause="30" act="next"/>
+		<waypoint to="16,22,0" travel="5!" act="halt"/>
+	</moving>
+	<moving pos="36,23,0" half="true" theme="white" active="true">
+		<waypoint to="16,23,0" travel="5!" act="halt"/>
+	</moving>
+
+	<prism pos="21,17,1"/>
+	<checkpoint pos="21,17,1" respawn="21,17,1"/>
+
+	<!-- elevator section -->
+	<moving id="E1" pos="21,10,0" half="false" active="true" theme="white">
+		<waypoint to="21,10,3" travel="1!" pause="120" act="next"/>
+		<waypoint to="21,10,0" travel="1!" pause="120" act="loop"/>
+	</moving>
+	<moving follow="E1" offset="0,1,0" half="false" active="true" theme="white"/>
+	<moving follow="E1" offset="0,2,0" half="false" active="true" theme="white"/>
+	<moving follow="E1" offset="0,0,1" half="false" active="true" theme="white"/>
+	<moving follow="E1" offset="0,0,2" half="false" active="true" theme="white"/>
+	<moving follow="E1" offset="0,0,3" half="false" active="true" theme="white"/>
+	<moving follow="E1" offset="0,1,3" half="false" active="true" theme="white"/>
+	<moving follow="E1" offset="0,2,3" half="false" active="true" theme="white"/>
+	<moving follow="E1" offset="0,0,4" half="false" active="true" theme="white"/>
+
+	<shrink pos="17,17,7" visible="true"/>
+
+	<prism pos="17,17,4"/>
+	<checkpoint pos="17,17,4" respawn="17,17,4"/>
+	<moving id="P1" pos="17,17,4" half="false" active="false" theme="white">
+		<waypoint to="17,16,4" travel="1!" act="halt"/>
+	</moving>
+	<moving id="P2" follow="P1" offset="0,0,1" half="false" active="false" theme="white"/>
+	<button pos="21,17,7">
+		<move id="P1" waypoint="0"/>
+		<move id="P2" waypoint="0"/>
+	</button>
+
+	<!-- 1st minicube section -->
+	<moving id="E2" pos="17,15,6" half="false" active="false" theme="white">
+		<waypoint to="17,15,10" travel="120" act="halt"/>
+	</moving>
+	<button moving="E2">
+		<move id="E2" waypoint="0"/>
+	</button>
+
+	<falling pos="21,13,10" float="110" theme="white"/>
+	<falling pos="21,14,10" float="110" theme="white"/>
+	<falling pos="21,15,10" float="110" theme="white"/>
+	<falling pos="21,16,10" float="110" theme="white"/>
+	<checkpoint pos="21,17,11" respawn="21,17,11"/>
+
+	<moving pos="21,11,13" half="true" active="true" theme="white">
+		<waypoint to="21,14,13" travel="1!" pause="120" act="next"/>
+		<waypoint to="21,11,13" travel="1!" pause="120" act="loop"/>
+	</moving>
+
+	<prism pos="21,17,14"/>
+
+	<!-- grow zone -->
+	<moving id="G1" pos="15,17,14" half="false" active="false" theme="white">
+		<waypoint to="15,17,14" pause="2!" act="next"/>
+		<waypoint to="15,16,14" travel="1!" act="halt"/>
+	</moving>
+	<moving id="G2" follow="G1" offset="0,0,1" half="false" active="false" theme="white"/>
+	<moving id="G3" follow="G1" offset="0,-1,0" half="false" active="false" theme="white"/>
+	<moving id="G4" pos="16,15,14" half="false" active="false" theme="white">
+		<waypoint to="16,15,14" pause="2!" act="next"/>
+		<waypoint to="16,16,14" travel="1!" act="halt"/>
+	</moving>
+	<grow pos="16,16,14" visible="true"/>
+	<button pos="16,16,14" radius="0,0">
+		<move id="G1" waypoint="0"/>
+		<move id="G2" waypoint="0"/>
+		<move id="G3" waypoint="0"/>
+		<move id="G4" waypoint="0"/>
+	</button>
+	<checkpoint pos="16,16,14" respawn="16,16,14"/>
+
+	<!-- hang section -->
+	<cameralock id="hangSec" eye="7,17,14"/>
+	<button pos="14,17,14" radius="0,0" lock="hangSec"/>
+
+	<moving pos="4,17,13" half="false" active="true" theme="white">
+		<waypoint to="7,17,13" travel="180" pause="60" act="next"/>
+		<waypoint to="4,17,13" travel="180" pause="60" act="loop"/>
+	</moving>
+	<moving pos="7,17,13" half="false" active="true" theme="white">
+		<waypoint to="10,17,13" travel="180" pause="60" act="next"/>
+		<waypoint to="7,17,13" travel="180" pause="60" act="loop"/>
+	</moving>
+	<shrink pos="3,17,14" visible="true"/>
+	<prism pos="2,17,15"/>
+
+	<!-- section barrier -->
+	<falling pos="4,17,8" float="45" theme="white"/>
+	<falling pos="5,17,8" float="45" theme="white"/>
+	<falling pos="6,17,8" float="45" theme="white"/>
+	<falling pos="7,17,8" float="45" theme="white"/>
+	<falling pos="8,17,8" float="45" theme="white"/>
+	<falling pos="9,17,8" float="45" theme="white"/>
+	<falling pos="10,17,8" float="45" theme="white"/>
+
+	<moving id="F1" pos="4,16,9" half="false" theme="white" active="false">
+		<waypoint to="4,17,9" travel="30" act="halt"/>
+	</moving>
+	<moving id="F2" follow="F1" offset="1,0,0" half="false" theme="white" active="false"/>
+	<moving id="F3" follow="F1" offset="2,0,0" half="false" theme="white" active="false"/>
+	<moving id="F4" follow="F1" offset="3,0,0" half="false" theme="white" active="false"/>
+	<moving id="F5" follow="F1" offset="4,0,0" half="false" theme="white" active="false"/>
+	<moving id="F6" follow="F1" offset="5,0,0" half="false" theme="white" active="false"/>
+	<moving id="F7" follow="F1" offset="6,0,0" half="false" theme="white" active="false"/>
+	<button pos="7,17,9" radius="3,0">
+		<move id="F1" waypoint="0"/>
+		<move id="F2" waypoint="0"/>
+		<move id="F3" waypoint="0"/>
+		<move id="F4" waypoint="0"/>
+		<move id="F5" waypoint="0"/>
+		<move id="F6" waypoint="0"/>
+		<move id="F7" waypoint="0"/>
+	</button>
+
+	<!-- rotate section -->
+	<cameralock id="rotSec" eye="7,17,5"/>
+	<button pos="1,17,7" radius="0,0" lock="rotSec"/>
+	<checkpoint pos="1,17,7" respawn="1,17,7"/>
+
+	<moving pos="5,17,6" half="false" active="true" theme="white">
+		<waypoint to="9,17,6" travel="180" pause="60" act="next"/>
+		<waypoint to="9,17,3" travel="180" pause="60" act="next"/>
+		<waypoint to="5,17,3" travel="180" pause="60" act="next"/>
+		<waypoint to="5,17,6" travel="180" pause="60" act="loop"/>
+	</moving>
+	<moving pos="5,17,3" half="false" active="true" theme="white">
+		<waypoint to="5,17,6" travel="180" pause="60" act="next"/>
+		<waypoint to="9,17,6" travel="180" pause="60" act="next"/>
+		<waypoint to="9,17,3" travel="180" pause="60" act="next"/>
+		<waypoint to="5,17,3" travel="180" pause="60" act="loop"/>
+	</moving>
+	<moving pos="9,17,3" half="false" active="true" theme="white">
+		<waypoint to="5,17,3" travel="180" pause="60" act="next"/>
+		<waypoint to="5,17,6" travel="180" pause="60" act="next"/>
+		<waypoint to="9,17,6" travel="180" pause="60" act="next"/>
+		<waypoint to="9,17,3" travel="180" pause="60" act="loop"/>
+	</moving>
+	<moving pos="9,17,6" half="false" active="true" theme="white">
+		<waypoint to="9,17,3" travel="180" pause="60" act="next"/>
+		<waypoint to="5,17,3" travel="180" pause="60" act="next"/>
+		<waypoint to="5,17,6" travel="180" pause="60" act="next"/>
+		<waypoint to="9,17,6" travel="180" pause="60" act="loop"/>
+	</moving>
+	<prism pos="9,17,4"/>
+
+	<grow pos="1,17,4" visible="false"/>
+	<cameratrigger pos="2,17,4" time="1!" zoom="3"/>
+	<button pos="2,17,4" radius="0,0" lock="none"/>
+
+	<moving id="skip" pos="1,17,3" half="false" active="false" theme="white">
+		<waypoint to="1,13,3" travel="40" pause="40" act="next"/>
+		<waypoint to="17,8,3" travel="40" pause="40" act="next"/>
+		<waypoint to="21,8,3" travel="40" pause="40" act="halt"/>
+	</moving>
+	<button moving="skip">
+		<move id="skip" waypoint="0"/>
+	</button>
+
+	<!-- push section -->
+	<prism pos="21,8,4"/>
+	<checkpoint pos="21,8,4" respawn="21,8,4"/>
+
+	<falling pos="21,3,3" float="80" theme="white"/>
+	<falling pos="21,4,3" float="80" theme="white"/>
+	<falling pos="21,5,3" float="80" theme="white"/>
+	<falling pos="21,6,3" float="80" theme="white"/>
+
+	<moving pos="21,1,5" half="false" active="true" theme="white">
+		<waypoint to="24,1,5" travel="180" pause="120" act="next"/>
+		<waypoint to="21,1,5" travel="180" pause="120" act="loop"/>
+	</moving>
+
+	<moving id="H1" pos="25,1,4" half="false" active="false" theme="white">
+		<waypoint to="25,1,4" pause="1!" act="next"/>
+		<waypoint to="25,2,4" travel="60" pause="40" act="next"/>
+		<waypoint to="25,2,7" travel="60" pause="40" act="next"/>
+		<waypoint to="25,1,7" travel="120" act="halt"/>
+	</moving>
+	<moving id="H2" pos="25,1,7" half="false" active="false" theme="white">
+		<waypoint to="25,1,7" pause="440" act="next"/>
+		<waypoint to="25,0,7" travel="120" act="halt"/>
+	</moving>
+	<button moving="H1">
+		<move id="H1" waypoint="0"/>
+		<move id="H2" waypoint="0"/>
+	</button>
+
+	<cameratrigger pos="25,1,8" time="1!" zoom="2"/>
+	<checkpoint pos="25,1,8" respawn="25,1,8"/>
+	<prism pos="21,1,8"/>
+
+	<!-- bump out section -->
+	<bumper pos="23,0,8" dir="south" theme="white" bump="160" pause="80" active="true"/>
+	<bumper pos="20,3,8" dir="west" theme="white" bump="160" pause="80" active="true"/>
+	<bumper pos="20,5,8" dir="west" theme="white" bump="160" pause="80" active="true"/>
+	<bumper pos="20,7,8" dir="west" theme="white" bump="160" pause="80" active="true"/>
+
+	<moving id="BO" pos="21,8,7" half="false" theme="white" active="false">
+		<waypoint to="21,8,10" travel="60" act="halt"/>
+	</moving>
+	<button moving="BO">
+		<move id="BO" waypoint="0"/>
+	</button>
+	<shrink pos="21,7,11" visible="true"/>
+	<cameratrigger pos="21,7,11" time="2!" fov="44"/>
+
+	<!-- rat section -->
+	<checkpoint pos="21,7,11" respawn="21,7,11"/>
+	<prism pos="21,3,12"/>
+	<prism pos="25,1,14"/>
+
+	<moving id="X1" pos="24,0,13" active="false" theme="white" half="false">
+		<waypoint to="24,1,13" travel="60" act="halt"/>
+	</moving>
+	<button pos="25,1,14">
+		<move id="X1" waypoint="0"/>
+	</button>
+
+	<prism pos="21,1,15"/>
+	<falling pos="21,3,14" float="60" theme="white"/>
+
+	<!-- level exit -->
+	<moving id="X2" pos="20,6,13" active="false" theme="white" half="true">
+		<waypoint to="19,6,13" travel="10" pause="10" act="next"/>
+		<waypoint to="19,6,0" travel="130" pause="10" act="next"/>
+		<waypoint to="19,15,0" travel="90" pause="10" act="next"/>
+		<waypoint to="12,15,0" travel="70" pause="10" act="next"/>
+		<waypoint to="12,17,0" travel="60" pause="10" act="halt"/>
+	</moving>
+	<button moving="X2">
+		<move id="X2" waypoint="0"/>
+	</button>
+
+	<checkpoint pos="12,17,1" respawn="12,17,1"/>
+	<prism pos="13,17,1"/>
+</level>
